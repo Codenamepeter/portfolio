@@ -42,6 +42,8 @@
               [ '메조미디어',  new Date(2017, 7, 3),  new Date(2020, 9, 20) ]]);
             chart.draw(dataTable);
           }
+        </script>
+        <script type="text/javascript">
           google.charts.load('current', {packages:['wordtree']});
           google.charts.setOnLoadCallback(drawChart);
 
@@ -79,6 +81,8 @@
             var chart = new google.visualization.WordTree(document.getElementById('wordtree_basic'));
             chart.draw(data, options);
           }
+         </script>
+        <script type="text/javascript">
           function drawTable() {
               var data = new google.visualization.DataTable();
               data.addColumn('string', 'Name');
