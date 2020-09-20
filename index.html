@@ -106,7 +106,7 @@
             </div>
         </section>
             
-         <!-- 스킬셋, 구글 차트 | 워드트리 -->
+         <!-- EDUCATION & SKILL , DataTables -->
          <section class="page-section bg-primary text-white mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
@@ -124,18 +124,18 @@
                 <table id="edu_skill" class="table table-bordered">
                   <thead>
                     <tr>
-                      <th>Seq</th>
-                      <th>Name</th>
-                      <th>Age</th>
-                      <th>Date</th>
+                      <th>구분</th>
+                      <th>항목명</th>
+                      <th>이수구분</th>
+                      <th>날짜</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr th:each="data : ${serverData}">
-                      <td th:text="${data.seq}></td>
-                      <td th:text="${data.name}></td>
-                      <td th:text="${data.age}></td>
-                      <td th:text="${data.date}></td>
+                    <tr>
+                      <td>고등학교</td>
+                      <td>서울고척고등학교</td>
+                      <td>졸업</td>
+                      <td>1999.02</td>
                     </tr>
                   </tbody>
                 </table>
