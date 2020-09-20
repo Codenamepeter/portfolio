@@ -12,9 +12,13 @@
         <link href="css/styles.css" rel="stylesheet">
          <!-- Fonts CSS-->
         <link rel="stylesheet" href="css/heading.css">
-        <link rel="stylesheet" href="css/body.css">        
+        <link rel="stylesheet" href="css/body.css">
         <link rel="shortcut icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
         <link rel="icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
+        <!-- DataTables -->
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+        
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript">
           google.charts.load('current', {'packages':['timeline']});
@@ -43,33 +47,7 @@
             chart.draw(dataTable);
           }
         </script>
-        <script type="text/javascript">
-          google.charts.load('current', {packages:['wordtree']});
-          google.charts.setOnLoadCallback(drawChart);
-
-          function drawChart() {
-            var data = google.visualization.arrayToDataTable(
-              [ ['Phrases'],
-                ['Quality is Free'],
-                ['Quality include Testing'],
-                ['Quality is not Testing'],
-                ['Quality is based on Testing'],
-                ['Quality has Many Technique'],
-                ['Quality is called Basic'],                
-              ]
-            );
-
-            var options = {
-              wordtree: {
-                format: 'implicit',
-                word: 'cats'
-              }
-            };
-
-            var chart = new google.visualization.WordTree(document.getElementById('wordtree_basic'));
-            chart.draw(data, options);
-          }
-         </script>    
+ 
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
@@ -108,12 +86,12 @@
                 <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height: 2.2;">QA Full stack Engnineer</p>
                 <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height: 2.2;">Various experience In the IT</p>
         </header>
-        <!-- 경력, 구글 차트 | 타임라인 -->    
+        <!-- CAREER, 구글 차트 | 타임라인 -->    
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
                 <div class="text-center">
-                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">CARRER</h2>
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">CAREER</h2>
                 </div>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
@@ -133,7 +111,7 @@
             <div class="container">
                 <!-- About Section Heading-->
                 <div class="text-center">
-                    <h2 class="page-section-heading d-inline-block text-white">SKILL SET</h2>
+                    <h2 class="page-section-heading d-inline-block text-white">EDUCATION & SKILL</h2>
                 </div>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
@@ -143,7 +121,24 @@
                 </div>
                 <!-- About Section Content-->
                 <center>
-                <div id="wordtree_basic" style="width: 900px; height: 500px;"></div>
+                <table id="edu_skill" class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Seq</th>
+                      <th>Name</th>
+                      <th>Age</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr th:each="data : ${serverData}">
+                      <td th:text="${data.seq}></td>
+                      <td th:text="${data.name}></td>
+                      <td th:text="${data.age}></td>
+                      <td th:text="${data.date}></td>
+                    </tr>
+                  </tbody>
+                </table>
                 </center>
             </div>
         </section>
