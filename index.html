@@ -38,11 +38,50 @@
               [ '세이퍼존',      new Date(2011, 11, 28),  new Date(2013, 4, 20) ],
               [ '티시스 숭례문지점',      new Date(2013, 5, 6),  new Date(2014, 1, 15) ],
               [ '네오블',      new Date(2014, 3, 27),  new Date(2014, 7, 7) ],  
-              [ '열린기술',      new Date(2014, 11, 17),  new Date(2016, 6, 30) ],                
+              [ '열린기술',      new Date(2014, 11, 17),  new Date(2017, 6, 30) ],                
               [ '메조미디어',  new Date(2017, 7, 3),  new Date(2020, 9, 20) ]]);
             chart.draw(dataTable);
           }
         </script>
+        <script type="text/javascript">
+          google.charts.load('current', {packages:['wordtree']});
+          google.charts.setOnLoadCallback(drawChart);
+
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable(
+              [ ['Phrases'],
+                ['cats are better than dogs'],
+                ['cats eat kibble'],
+                ['cats are better than hamsters'],
+                ['cats are awesome'],
+                ['cats are people too'],
+                ['cats eat mice'],
+                ['cats meowing'],
+                ['cats in the cradle'],
+                ['cats eat mice'],
+                ['cats in the cradle lyrics'],
+                ['cats eat kibble'],
+                ['cats for adoption'],
+                ['cats are family'],
+                ['cats eat mice'],
+                ['cats are better than kittens'],
+                ['cats are evil'],
+                ['cats are weird'],
+                ['cats eat mice'],
+              ]
+            );
+
+            var options = {
+              wordtree: {
+                format: 'implicit',
+                word: 'cats'
+              }
+            };
+
+            var chart = new google.visualization.WordTree(document.getElementById('wordtree_basic'));
+            chart.draw(data, options);
+          }
+    </script>
 
     </head>
     <body id="page-top">
@@ -82,11 +121,12 @@
                 <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height: 2.2;">QA Full stack Engnineer</p>
                 <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height: 2.2;">Various experience In the IT</p>
         </header>
+        <!-- 경력, 구글 차트 | 타임라인 -->    
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
                 <div class="text-center">
-                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">PORTFOLIO</h2>
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">CARRER</h2>
                 </div>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
@@ -99,21 +139,19 @@
                     <!-- Portfolio Items-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div><img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="Log Cabin"/>
+                           <div id="timeline" style="height: 540px;"></div>                            
                         </div>
                     </div>
                 </div>
             </div>
         </section>
             
-         <!--구글차트 -->
+         <!-- 스킬셋, 구글 차트 | 워드트리 -->
          <section class="page-section bg-primary text-white mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
                 <div class="text-center">
-                    <h2 class="page-section-heading d-inline-block text-white">ABOUT</h2>
+                    <h2 class="page-section-heading d-inline-block text-white">SKILL SET</h2>
                 </div>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
@@ -122,7 +160,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- About Section Content-->
-                <div id="timeline" style="height: 540px;"></div>
+                <div id="wordtree_basic" style="width: 900px; height: 500px;"></div>
             </div>
         </section>
             
