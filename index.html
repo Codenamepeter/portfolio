@@ -16,6 +16,25 @@
         <link rel="shortcut icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
         <link rel="icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['timeline']});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var container = document.getElementById('timeline');
+            var chart = new google.visualization.Timeline(container);
+            var dataTable = new google.visualization.DataTable();
+
+            dataTable.addColumn({ type: 'string', id: 'President' });
+            dataTable.addColumn({ type: 'date', id: 'Start' });
+            dataTable.addColumn({ type: 'date', id: 'End' });
+            dataTable.addRows([
+              [ 'Washington', new Date(1789, 3, 30), new Date(1797, 2, 4) ],
+              [ 'Adams',      new Date(1797, 2, 4),  new Date(1801, 2, 4) ],
+              [ 'Jefferson',  new Date(1801, 2, 4),  new Date(1809, 2, 4) ]]);
+
+            chart.draw(dataTable);
+          }
+        </script>
 
     </head>
     <body id="page-top">
@@ -55,6 +74,32 @@
                 <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height: 2.2;">QA Full stack Engnineer</p>
                 <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height: 2.2;">Various experience In the IT</p>
         </header>
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">PORTFOLIO</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Portfolio Items-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div><img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="Log Cabin"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
          <!--구글차트 -->
          <section class="page-section bg-primary text-white mb-0" id="about">
             <div class="container">
@@ -69,25 +114,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- About Section Content-->
-                <div id="timeline" style="height: 180px;">
-                    google.charts.load('current', {'packages':['timeline']});
-                    google.charts.setOnLoadCallback(drawChart);
-                      function drawChart() {
-                        var container = document.getElementById('timeline');
-                        var chart = new google.visualization.Timeline(container);
-                        var dataTable = new google.visualization.DataTable();
-
-                        dataTable.addColumn({ type: 'string', id: 'President' });
-                        dataTable.addColumn({ type: 'date', id: 'Start' });
-                        dataTable.addColumn({ type: 'date', id: 'End' });
-                        dataTable.addRows([
-                          [ 'Washington', new Date(1789, 3, 30), new Date(1797, 2, 4) ],
-                          [ 'Adams',      new Date(1797, 2, 4),  new Date(1801, 2, 4) ],
-                          [ 'Jefferson',  new Date(1801, 2, 4),  new Date(1809, 2, 4) ]]);
-
-                        chart.draw(dataTable);
-                        }
-                </div>
+                <div id="timeline" style="height: 180px;"></div>
             </div>
         </section>
             
