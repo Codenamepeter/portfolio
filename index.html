@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/body.css">        
         <link rel="shortcut icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
         <link rel="icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     </head>
     <body id="page-top">
@@ -54,6 +55,42 @@
                 <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height: 2.2;">QA Full stack Engnineer</p>
                 <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height: 2.2;">Various experience In the IT</p>
         </header>
+         <!--구글차트 -->
+         <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading d-inline-block text-white">ABOUT</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div id="timeline" style="height: 180px;">
+                    google.charts.load('current', {'packages':['timeline']});
+                    google.charts.setOnLoadCallback(drawChart);
+                      function drawChart() {
+                        var container = document.getElementById('timeline');
+                        var chart = new google.visualization.Timeline(container);
+                        var dataTable = new google.visualization.DataTable();
+
+                        dataTable.addColumn({ type: 'string', id: 'President' });
+                        dataTable.addColumn({ type: 'date', id: 'Start' });
+                        dataTable.addColumn({ type: 'date', id: 'End' });
+                        dataTable.addRows([
+                          [ 'Washington', new Date(1789, 3, 30), new Date(1797, 2, 4) ],
+                          [ 'Adams',      new Date(1797, 2, 4),  new Date(1801, 2, 4) ],
+                          [ 'Jefferson',  new Date(1801, 2, 4),  new Date(1809, 2, 4) ]]);
+
+                        chart.draw(dataTable);
+                        }
+                </div>
+            </div>
+        </section>
+            
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
