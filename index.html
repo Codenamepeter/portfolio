@@ -50,24 +50,12 @@
           function drawChart() {
             var data = google.visualization.arrayToDataTable(
               [ ['Phrases'],
-                ['cats are better than dogs'],
-                ['cats eat kibble'],
-                ['cats are better than hamsters'],
-                ['cats are awesome'],
-                ['cats are people too'],
-                ['cats eat mice'],
-                ['cats meowing'],
-                ['cats in the cradle'],
-                ['cats eat mice'],
-                ['cats in the cradle lyrics'],
-                ['cats eat kibble'],
-                ['cats for adoption'],
-                ['cats are family'],
-                ['cats eat mice'],
-                ['cats are better than kittens'],
-                ['cats are evil'],
-                ['cats are weird'],
-                ['cats eat mice'],
+                ['Quality is Free'],
+                ['Quality include Testing'],
+                ['Quality is not Testing'],
+                ['Quality is based on Testing'],
+                ['Quality has Many Technique'],
+                ['Quality is called Basic'],                
               ]
             );
 
@@ -81,40 +69,7 @@
             var chart = new google.visualization.WordTree(document.getElementById('wordtree_basic'));
             chart.draw(data, options);
           }
-         </script>
-        <script type="text/javascript">
-          function drawTable() {
-              var data = new google.visualization.DataTable();
-              data.addColumn('string', 'Name');
-              data.addColumn('number', 'Salary');
-              data.addColumn('boolean', 'Full Time');
-              data.addRows(5);
-              data.setCell(0, 0, 'John');
-              data.setCell(0, 1, 10000, '$10,000');
-              data.setCell(0, 2, true);
-              data.setCell(1, 0, 'Mary');
-              data.setCell(1, 1, 25000, '$25,000');
-              data.setCell(1, 2, true);
-              data.setCell(2, 0, 'Steve');
-              data.setCell(2, 1, 8000, '$8,000');
-              data.setCell(2, 2, false);
-              data.setCell(3, 0, 'Ellen');
-              data.setCell(3, 1, 20000, '$20,000');
-              data.setCell(3, 2, true);
-              data.setCell(4, 0, 'Mike');
-              data.setCell(4, 1, 12000, '$12,000');
-              data.setCell(4, 2, false);
-
-              var table = new google.visualization.Table(document.getElementById('table_div'));
-              table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
-
-              google.visualization.events.addListener(table, 'select', function() {
-                var row = table.getSelection()[0].row;
-                alert('You selected ' + data.getValue(row, 0));
-              });
-            }
-    </script>
-
+         </script>    
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
@@ -187,8 +142,9 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- About Section Content-->
-                <div id="DataTable" style="width: 900px; height: 500px;"></div>
+                <center>
                 <div id="wordtree_basic" style="width: 900px; height: 500px;"></div>
+                </center>
             </div>
         </section>
             
