@@ -17,10 +17,13 @@
         <link rel="icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
         <!-- DataTables -->
         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
-        $("#edu_skill").DataTable({
+        <script>
+        jQuery(function($){
+	    $("#edu_skill").DataTable({
 	        // 초기 표시에 경우 정렬 안함
 	        order: []
         });
+	</script>
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
         
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
