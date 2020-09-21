@@ -17,12 +17,10 @@
         <link rel="icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
         <!-- DataTables -->
         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
-        <script>
-        jQuery(function($){
-	    $("#edu_skill").DataTable({
-	        // 초기 표시에 경우 정렬 안함
-	        order: []
-        });
+        <script type="text/javascript">
+        	jQuery(function($){
+			$("#edu_skill").DataTable();
+		});
 	</script>
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
         
@@ -125,45 +123,19 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- About Section Content-->
-                <div class="col-lg-4 ml-auto">    
-                    <center>
+                <center>
                     <table id="edu_skill" class="table table-bordered" >
                       <thead>
-                        <tr>
-                          <th>구분</th>
-                          <th>항목명</th>
-                          <th>이수구분</th>
-                          <th>날짜</th>
-                          <th>기타</th>  
-                        </tr>
+                        <tr><th>구분</th><th>항목명</th><th>이수구분</th><th>날짜</th><th>기타</th></tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td>고등학교</td>
-                          <td>서울고척고등학교</td>
-                          <td>졸업</td>
-                          <td>1996 ~ 1999</td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td>전문학교</td>
-                          <td>서울호서전산전문학교</td>
-                          <td>자퇴</td>
-                          <td>1999 ~ 2000, 군입대</td>
-                          <td>전역 후 자퇴</td>
-                        </tr>
-                        <tr>
-                          <td>전문대학</td>
-                          <td>유한대학</td>
-                          <td>졸업</td>
-                          <td>2005 ~ 2008</td>
-                          <td>회사권유로 2007년 휴학</td>
-                        </tr>  
-                      </tbody>
-                    </table>
-                    </center>
-                </
-            </div>
+			<tbody>
+				<tr><td>고등학교</td><td>서울고척고등학교</td><td>졸업</td><td>1996 ~ 1999</td></tr>
+				<tr><td>전문학교</td><td>서울호서전산전문학교</td><td>자퇴</td><td>1999 ~ 2000, 군입대</td><td>전역 후 자퇴</td></tr>
+				<tr><td>전문대학</td><td>유한대학</td><td>졸업</td><td>2005 ~ 2008</td><td>회사권유로 2007년 휴학</td></tr>  
+			</tbody>
+			</table>
+			</center>           
+            
         </section>
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
