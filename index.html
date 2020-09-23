@@ -45,6 +45,7 @@
           }
         </script>
 	<!-- 구글차트, 테이블 -->
+	<script type="text/javascript">
 	google.charts.load('current', {'packages':['table']});
 	google.charts.setOnLoadCallback(drawTable);
 	function drawTable() {
@@ -78,6 +79,7 @@
 
 		table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
 	      }
+ 	</script>
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
