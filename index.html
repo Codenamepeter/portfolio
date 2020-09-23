@@ -41,8 +41,12 @@
               [ '네오블',      new Date(2014, 3, 27),  new Date(2014, 7, 7) ],  
               [ '열린기술',      new Date(2014, 11, 17),  new Date(2017, 6, 30) ],                
               [ '메조미디어',  new Date(2017, 7, 3),  new Date(2020, 9, 20) ]]);
-            chart.draw(dataTable);
-          }
+            	var options = {
+      		timeline: { rowLabelStyle: {fontSize: 14, color: '#603913' },
+		barLabelStyle: { fontSize: 10 } }
+    		};
+		chart.draw(dataTable);
+        	}
         </script>
 	<!-- 구글차트, 테이블 -->
 	<script type="text/javascript">
@@ -56,9 +60,9 @@
 		data.addColumn('string', '날짜');
 		data.addColumn('string', '설명');
 		data.addRows([
-		['전문학교', '호서전산전문학교', '중퇴', '1999/03~2000/02', '정보처리과'],  
-		['전문대학교', '유한대학교', '졸업', '2005/03~2008/02', '산업시스템경영과'],  
-		['대학교', '학점은행제', '졸업', '2010/03~2014/02', '정보통신공학사'],  
+		['학교', '호서전산전문학교', '중퇴', '1999/03~2000/02', '정보처리과'],  
+		['학교', '유한대학교', '졸업', '2005/03~2008/02', '산업시스템경영과'],  
+		['학교', '학점은행제', '졸업', '2010/03~2014/02', '정보통신공학사'],  
 		['교육', '소프트웨어 테스트 전문가 교육', '이수', '2005/06', 'TTA'],  
 		['교육', 'CC인증 평가제출물 작성교육', '이수', '2011/12', 'KISA'],  
 		['교육', 'ISP 교육', '이수', '2013/10', 'Tsis 사내 교육'],
@@ -137,12 +141,12 @@
                 </div>
             </div>
         </section>
-                <!-- EDUCATION & SKILL , DataTables -->
+                <!-- EDUCATION & Certificate , DataTables -->
          <section class="page-section bg-primary text-white mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
                 <div class="text-center">
-                    <h2 class="page-section-heading d-inline-block text-white">EDUCATION & SKILL</h2>
+                    <h2 class="page-section-heading d-inline-block text-white">EDUCATION & CERTIFICATE</h2>
                 </div>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
