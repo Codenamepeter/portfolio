@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Portfolio">
-        <meta name="author" content="CodeName Peter">
-        <title>QA Engineer | Park hee jang</title>
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet">
-         <!-- Fonts CSS-->
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Portfolio">
+	<meta name="author" content="CodeName Peter">
+	<title>QA Engineer | Park hee jang</title>
+	<!-- Font Awesome icons (free version)-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="css/styles.css" rel="stylesheet">
+        <!-- Fonts CSS-->
         <link rel="stylesheet" href="css/heading.css">
         <link rel="stylesheet" href="css/body.css">
         <link rel="shortcut icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
         <link rel="icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
-        <!-- DataTables -->
-        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
-        <script type="text/javascript">
-        	jQuery(function($){
-			$("#edu_skill").DataTable();
-		});
-	</script>
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
-        
+        <!-- 구글차트, 타임라인 -->
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript">
           google.charts.load('current', {'packages':['timeline']});
@@ -51,7 +43,41 @@
               [ '메조미디어',  new Date(2017, 7, 3),  new Date(2020, 9, 20) ]]);
             chart.draw(dataTable);
           }
-        </script>          
+        </script>
+	<!-- 구글차트, 테이블 -->
+	google.charts.load('current', {'packages':['table']});
+	google.charts.setOnLoadCallback(drawTable);
+	function drawTable() {
+		var data = new google.visualization.DataTable();
+		data.addColumn('string', '구분');
+		data.addColumn('string', '항목명');
+		data.addColumn('string', '이수');
+		data.addColumn('string', '날짜');
+		data.addColumn('string', '설명');
+		data.addRows([
+		['전문학교', '호서전산전문학교', '중퇴', '1999/03~2000/02', '정보처리과'],  
+		['전문대학교', '유한대학교', '졸업', '2005/03~2008/02', '산업시스템경영과'],  
+		['대학교', '학점은행제', '졸업', '2010/03~2014/02', '정보통신공학사'],  
+		['교육', '소프트웨어 테스트 전문가 교육', '이수', '2005/06', 'TTA'],  
+		['교육', 'CC인증 평가제출물 작성교육', '이수', '2011/12', 'KISA'],  
+		['교육', 'ISP 교육', '이수', '2013/10', 'Tsis 사내 교육'],
+		['교육', '화학 및 건설안전 기술 교육', '이수', '2015/02~2015/03', '멀티캠퍼스 온라인교육'],
+		['교육', '실무사례를 통한 프로젝트 관리 기법 및 적용과 해법', '이수', '2015/06~2015/07', '멀티캠퍼스 온라인교육'],
+		['교육', '웹접근성의 이해(기본)', '이수', '2015/07', '한국정보화진흥원'],
+		['교육', '데이터베이스 관리(DB구조, 인스턴스, 저장영역)', '이수', '2017/05', '한국소프트웨어기술진흥협회'],
+		['교육', 'Data 품질관리', '이수', '2017/05', '한국소프트웨어기술진흥협회'],
+		['자격', '정보처리기능사', '합격', '1998/12', '한국산업인력공단'],
+		['자격', '워드프로세스 1급', '합격', '2002/12', '대한상공회의소'],
+		['자격', '정보처리산업기사', '합격', '2012/08', '한국산업인력공단'],
+		['자격', '정보처리기사', '합격', '2013/08', '한국산업인력공단'],
+		['자격', 'ISTQB Foundation Level', '합격', '2014/08', 'ISTQB'],
+		['자격', '개인정보취급사(CPPF)', '합격', '2016/07', '한국CPO포럼'],
+		]);
+
+		var table = new google.visualization.Table(document.getElementById('table_div'));
+
+		table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+	      }
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
@@ -83,12 +109,12 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height: 2.2;">IT Generalist & Testing Evangelist</p>
-                <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height: 2.2;">Test Engineering Specialist</p>
-                <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height: 2.2;">SW Cetificate Veteran</p>
-                <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height: 2.2;">Project Management Office</p>
-                <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height: 2.2;">QA Full stack Engnineer</p>
-                <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height: 2.2;">Various experience In the IT</p>
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1;"><b>IT Generalist &amp; Testing Evangelist</b></p>
+		<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1;"><b>Test Engineering Specialist</b></p>
+		<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1;"><b>SW Cetificate Veteran</b></p>
+		<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1;"><b>Project Management Office</b></p>
+		<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1;"><b>QA Full stack Engnineer</b></p>
+		<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1;"><b>Various experience In the IT</b></p>
         </header>
         <!-- CAREER, 구글 차트 | 타임라인 -->    
         <section class="page-section portfolio" id="portfolio">
@@ -124,16 +150,7 @@
                 </div>
                 <!-- About Section Content-->
                 <center>
-                	<table id="edu_skill" class="table table-bordered" >
-                		<thead>
-                        		<tr><th>구분</th><th>항목명</th><th>이수구분</th><th>날짜</th><th>기타</th></tr>
-                		</thead>
-			<tbody>
-				<tr><td>고등학교</td><td>서울고척고등학교</td><td>졸업</td><td>1996 ~ 1999</td><td></td></tr>
-				<tr><td>전문학교</td><td>서울호서전산전문학교</td><td>자퇴</td><td>1999 ~ 2000, 군입대</td><td>전역 후 자퇴</td></tr>
-				<tr><td>전문대학</td><td>유한대학</td><td>졸업</td><td>2005 ~ 2008</td><td>회사권유로 2007년 휴학</td></tr>  
-			</tbody>
-			</table>
+			<div id="table_div"></div>   
 		</center>           
             
         </section>
@@ -418,3 +435,5 @@
         <script src="js/scripts.js"></script>
     </body>
 </html>
+
+	
