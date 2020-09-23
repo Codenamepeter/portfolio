@@ -38,10 +38,10 @@
               [ '바른손게임즈', 'QA팀 | 국내외 서비스 게임 소프트웨어 품질 관리',new Date(2010, 6, 14),  new Date(2011, 6, 25) ],
               [ '짱라이브', '운영팀 | 모바일 동영상 서비스 품질 관리', new Date(2011, 6, 27),  new Date(2011, 7, 31) ],
               [ '세이퍼존', '기술연구소 | 보안 소프트웨어 품질 및 인증 관리',     new Date(2011, 11, 28),  new Date(2013, 4, 20) ],
-              [ '티시스 숭례문지점', '품질개선팀 | 금융 계열 전사 품질 관리 지원',     new Date(2013, 5, 6),  new Date(2014, 1, 15) ],
+              [ '티시스 숭례문지점', '품질개선팀 | 흥국 계열 및 전사 품질 개선 주도',     new Date(2013, 5, 6),  new Date(2014, 1, 15) ],
               [ '네오블', 'QA팀 | KT 뮤직 Genie 앱 품질 관리', new Date(2014, 3, 27),  new Date(2014, 7, 7) ],  
               [ '열린기술', '수행본부 | 스마트 팩토리 SI 프로젝트 품질 관리 수행', new Date(2014, 11, 17),  new Date(2017, 6, 30) ],                
-              [ '메조미디어', '운영팀 | 대내외 광고 솔루션 프로젝트 품질 관리 수행',  new Date(2017, 7, 3),  new Date(2020, 9, 20) ]]);
+              [ '메조미디어', '운영팀 | 대내/외 광고 솔루션 프로젝트 품질 관리 수행',  new Date(2017, 7, 3),  new Date(2020, 9, 20) ]]);
             	var options = {
       		timeline: { rowLabelStyle: {fontSize: 14, color: '#603913' },
 		barLabelStyle: { fontSize: 10 } }
@@ -78,14 +78,17 @@
 		['자격', '정보처리기사', '합격', '2013/08', '한국산업인력공단'],
 		['자격', 'ISTQB Foundation Level', '합격', '2014/08', 'ISTQB'],
 		['자격', '개인정보취급사(CPPF)', '합격', '2016/07', '한국CPO포럼'],
-		['자격', 'OPIC Speaking', 'IL', '2019/08', 'ACTFL'],
-		]);
+		['자격', 'OPIC Speaking IL', '합격', '2019/08', 'ACTFL']]);
 
 		var table = new google.visualization.Table(document.getElementById('table_div'));
 
 		table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
 	      }
  	</script>
+	<!-- Chart JS -->
+	<script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
+	<script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+	<script src="https://www.chartjs.org/samples/latest/charts/area/analyser.js"></script>
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
@@ -176,7 +179,132 @@
                     <div class="divider-custom-line"></div>
                 </div>
                     <center>
-                    <div id="timeline" style=" height: 540px;"></div>
+                    
+			    	<div class="content">
+		<div class="wrapper" style="max-width: 512px; margin: auto">
+			<canvas id="chart-0"></canvas>
+		</div>
+		<div class="toolbar">
+			<button onclick="togglePropagate(this)">Propagate</button>
+			<button onclick="toggleSmooth(this)">Smooth</button>
+			<button onclick="randomize(this)">Randomize</button>
+		</div>
+		<div id="chart-analyser" class="analyser"></div>
+	</div>
+
+	<script>
+		var presets = window.chartColors;
+		var utils = Samples.utils;
+		var inputs = {
+			min: 8,
+			max: 16,
+			count: 8,
+			decimals: 2,
+			continuity: 1
+		};
+
+		function generateData() {
+			// radar chart doesn't support stacked values, let's do it manually
+			var values = utils.numbers(inputs);
+			inputs.from = values;
+			return values;
+		}
+
+		function generateLabels() {
+			return utils.months({count: inputs.count});
+		}
+
+		utils.srand(42);
+
+		var data = {
+			labels: generateLabels(),
+			datasets: [{
+				backgroundColor: utils.transparentize(presets.red),
+				borderColor: presets.red,
+				data: generateData(),
+				label: 'D0'
+			}, {
+				backgroundColor: utils.transparentize(presets.orange),
+				borderColor: presets.orange,
+				data: generateData(),
+				hidden: true,
+				label: 'D1',
+				fill: '-1'
+			}, {
+				backgroundColor: utils.transparentize(presets.yellow),
+				borderColor: presets.yellow,
+				data: generateData(),
+				label: 'D2',
+				fill: 1
+			}, {
+				backgroundColor: utils.transparentize(presets.green),
+				borderColor: presets.green,
+				data: generateData(),
+				label: 'D3',
+				fill: false
+			}, {
+				backgroundColor: utils.transparentize(presets.blue),
+				borderColor: presets.blue,
+				data: generateData(),
+				label: 'D4',
+				fill: '-1'
+			}, {
+				backgroundColor: utils.transparentize(presets.purple),
+				borderColor: presets.purple,
+				data: generateData(),
+				label: 'D5',
+				fill: '-1'
+			}]
+		};
+
+		var options = {
+			maintainAspectRatio: true,
+			spanGaps: false,
+			elements: {
+				line: {
+					tension: 0.000001
+				}
+			},
+			plugins: {
+				filler: {
+					propagate: false
+				},
+				'samples-filler-analyser': {
+					target: 'chart-analyser'
+				}
+			}
+		};
+
+		var chart = new Chart('chart-0', {
+			type: 'radar',
+			data: data,
+			options: options
+		});
+
+		// eslint-disable-next-line no-unused-vars
+		function togglePropagate(btn) {
+			var value = btn.classList.toggle('btn-on');
+			chart.options.plugins.filler.propagate = value;
+			chart.update();
+		}
+
+		// eslint-disable-next-line no-unused-vars
+		function toggleSmooth(btn) {
+			var value = btn.classList.toggle('btn-on');
+			chart.options.elements.line.tension = value ? 0.4 : 0.000001;
+			chart.update();
+		}
+
+		// eslint-disable-next-line no-unused-vars
+		function randomize() {
+			inputs.from = [];
+			chart.data.datasets.forEach(function(dataset) {
+				dataset.data = generateData();
+			});
+			chart.update();
+		}
+	</script>
+			    
                     </center>
                 </div>
             </div>
