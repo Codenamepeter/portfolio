@@ -179,29 +179,55 @@
                     <div class="divider-custom-line"></div>
                 </div>
                     <center>
-                   <canvas id="myChart" style="height:30vh; width:50vw"></canvas>
+                   <canvas id="marksChart" style="height:30vh; width:50vw"></canvas>
 			<script>
-			var ctx = document.getElementById('myChart');
-			var myChart = new Chart(ctx, {
-			    type: 'radar',
-			    data: {
-				labels: ['QA', 'Testing', 'Methodology', 'PMO & Audit', 'Devops'],
-				datasets: [{
-				    label: 'technique',
-				    data: [95, 95, 90, 90, 90],
-				    borderWidth: 5,
-				    }],
-				    options: {
-				      responsive: false,
-				      scales: {
-					  yAxes: [{
-					      ticks: {
-						  beginAtZero: true
-					      }
-					  }]
-				      },
-				  }
+			var marksCanvas = document.getElementById("marksChart");
+			var marksData = {
+			  labels: ['QA', 'Testing', 'Methodology', 'PMO & Audit', 'Devops'],
+			  datasets: [{
+			    label: "Technique",
+			    backgroundColor: "transparent",
+			    borderColor: "rgba(200,0,0,0.6)",
+			    fill: false,
+			    radius: 6,
+			    pointRadius: 6,
+			    pointBorderWidth: 3,
+			    pointBackgroundColor: "red",
+			    pointBorderColor: "rgba(200,0,0,0.6)",
+			    pointHoverRadius: 10,
+			    data: [95, 95, 90, 90, 90]
+			  }]
+			};
+
+			var chartOptions = {
+			  scale: {
+			    gridLines: {
+			      color: "black",
+			      lineWidth: 3
 			    },
+			    angleLines: {
+			      display: false
+			    },
+			    ticks: {
+			      beginAtZero: true,
+			      min: 0,
+			      max: 100,
+			      stepSize:20
+			    },
+			    pointLabels: {
+			      fontSize: 18,
+			      fontColor: "green"
+			    }
+			  },
+			  legend: {
+			    position: 'left'
+			  }
+			};
+
+			var radarChart = new Chart(marksCanvas, {
+			  type: 'radar',
+			  data: marksData,
+			  options: chartOptions
 			});
 			</script>			    
                     </center>
