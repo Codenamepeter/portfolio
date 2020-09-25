@@ -1,656 +1,669 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Portfolio">
-	<meta name="author" content="CodeName Peter">
-	<title>QA Engineer | Park hee jang</title>
-	<!-- Font Awesome icons (free version)-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
-	<!-- Core theme CSS (includes Bootstrap)-->
-	<link href="css/styles.css" rel="stylesheet">
-        <!-- Fonts CSS-->
-        <link rel="stylesheet" href="css/heading.css">
-        <link rel="stylesheet" href="css/body.css">
-        <link rel="shortcut icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
-        <!-- 구글차트, 타임라인 -->
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript">
-          google.charts.load('current', {'packages':['timeline']});
-          google.charts.setOnLoadCallback(drawChart);
-          function drawChart() {
-            var container = document.getElementById('timeline');
-            var chart = new google.visualization.Timeline(container);
-            var dataTable = new google.visualization.DataTable();
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Portfolio">
+		<meta name="author" content="CodeName Peter">
+		<title>QA Engineer | Park hee jang</title>
+		
+		<!-- Font Awesome icons (free version)-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+		
+		<!-- Core theme CSS (includes Bootstrap)-->
+		<link href="css/styles.css" rel="stylesheet">
+		
+		<!-- Fonts CSS-->
+		<link rel="stylesheet" href="css/heading.css">
+		<link rel="stylesheet" href="css/body.css">
+		<link rel="shortcut icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
+		
+		<!-- 구글차트, 타임라인 -->
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">
+			google.charts.load('current', {'packages':['timeline']});
+			google.charts.setOnLoadCallback(drawChart);
+			function drawChart() {
+			var container = document.getElementById('timeline');
+			var chart = new google.visualization.Timeline(container);
+			var dataTable = new google.visualization.DataTable();
+			dataTable.addColumn({ type: 'string', id: 'item' });
+			dataTable.addColumn({ type: 'string', id: 'Desc' });
+			dataTable.addColumn({ type: 'date', id: 'Start' });
+			dataTable.addColumn({ type: 'date', id: 'End' });
+			dataTable.addRows([
+			[ '정말필요한회사', '셀빅팀 | 소프트웨어 테스트 및 기술지원', new Date(2003, 7, 1), new Date(2004, 1, 30) ],
+			[ '퓨처텔', 'QE팀 | 단말기 하드웨어 및 소프트웨어 테스트', new Date(2004, 8, 11), new Date(2005, 2, 28) ],
+			[ '마름모소프트', 'SQA1팀 | 나모인터랙티브 소프트웨어 품질관리 전담', new Date(2005, 3, 24), new Date(2008, 12, 20) ],
+			[ '홍인터내셔날', 'QA팀 | 리눅스 기반 임베디드 소프트웨어 테스트', new Date(2009, 2, 10), new Date(2009, 5, 14) ], 
+			[ '마름모소프트', '품질관리실 | 소프트웨어 품질 컨설팅', new Date(2009, 5, 18), new Date(2010, 3, 10) ],
+			[ '바른손게임즈', 'QA팀 | 국내외 서비스 게임 소프트웨어 품질 관리',new Date(2010, 6, 14), new Date(2011, 6, 25) ],
+			[ '짱라이브', '운영팀 | 모바일 동영상 서비스 품질 관리', new Date(2011, 6, 27), new Date(2011, 7, 31) ],
+			[ '세이퍼존', '기술연구소 | 보안 소프트웨어 품질 및 인증 관리', new Date(2011, 11, 28), new Date(2013, 4, 20) ],
+			[ '티시스 숭례문지점', '품질개선팀 | 흥국 계열 및 전사 품질 개선 주도', new Date(2013, 5, 6), new Date(2014, 1, 15) ],
+			[ '네오블', 'QA팀 | KT 뮤직 Genie 앱 품질 관리', new Date(2014, 3, 27), new Date(2014, 7, 7) ], 
+			[ '열린기술', '수행본부 | 스마트 팩토리 SI 프로젝트 품질 관리 수행', new Date(2014, 11, 17), new Date(2017, 6, 30) ], 
+			[ '메조미디어', '운영팀 | 대내/외 광고 솔루션 프로젝트 품질 관리 수행', new Date(2017, 7, 3), new Date(2020, 9, 20) ]]);
+			var options = {
+			timeline: { rowLabelStyle: {fontSize: 14, color: '#603913' },
+			barLabelStyle: { fontSize: 10 } }
+			};
+			chart.draw(dataTable);
+			}
+		</script>
+		
+		<!-- 구글차트, 테이블 -->
+		<script type="text/javascript">
+			google.charts.load('current', {'packages':['table']});
+			google.charts.setOnLoadCallback(drawTable);
+			function drawTable() {
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', '구분');
+			data.addColumn('string', '항목명');
+			data.addColumn('string', '이수');
+			data.addColumn('string', '날짜');
+			data.addColumn('string', '설명');
+			data.addRows([
+			['학교', '호서전산전문학교', '중퇴', '1999/03~2000/02', '정보처리과'], 
+			['학교', '유한대학교', '졸업', '2005/03~2008/02', '산업시스템경영과'], 
+			['학교', '학점은행제', '졸업', '2010/03~2014/02', '정보통신공학사'], 
+			['교육', '소프트웨어 테스트 전문가 교육', '이수', '2005/06', 'TTA'], 
+			['교육', 'CC인증 평가제출물 작성교육', '이수', '2011/12', 'KISA'], 
+			['교육', 'ISP 교육', '이수', '2013/10', 'Tsis 사내 교육'],
+			['교육', '화학 및 건설안전 기술 교육', '이수', '2015/02~2015/03', '멀티캠퍼스 온라인교육'],
+			['교육', '실무사례를 통한 프로젝트 관리 기법 및 적용과 해법', '이수', '2015/06~2015/07', '멀티캠퍼스 온라인교육'],
+			['교육', '웹접근성의 이해(기본)', '이수', '2015/07', '한국정보화진흥원'],
+			['교육', '데이터베이스 관리(DB구조, 인스턴스, 저장영역)', '이수', '2017/05', '한국소프트웨어기술진흥협회'],
+			['교육', 'Data 품질관리', '이수', '2017/05', '한국소프트웨어기술진흥협회'],
+			['자격', '정보처리기능사', '합격', '1998/12', '한국산업인력공단'],
+			['자격', '워드프로세스 1급', '합격', '2002/12', '대한상공회의소'],
+			['자격', '정보처리산업기사', '합격', '2012/08', '한국산업인력공단'],
+			['자격', '정보처리기사', '합격', '2013/08', '한국산업인력공단'],
+			['자격', 'ISTQB Foundation Level', '합격', '2014/08', 'ISTQB'],
+			['자격', '개인정보취급사(CPPF)', '합격', '2016/07', '한국CPO포럼'],
+			['자격', 'OPIC Speaking IL', '합격', '2019/08', 'ACTFL']]);
+			var table = new google.visualization.Table(document.getElementById('table_div'));
+			table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+			}
+		</script>
+		<!-- Chart JS -->
+		<script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
+		<script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+		<script src="https://www.chartjs.org/samples/latest/charts/area/analyser.js"></script>
+	</head>
 
-		dataTable.addColumn({ type: 'string', id: 'item' });
-		dataTable.addColumn({ type: 'string', id: 'Desc' });
-		dataTable.addColumn({ type: 'date', id: 'Start' });
-		dataTable.addColumn({ type: 'date', id: 'End' });
-		dataTable.addRows([
-              [ '정말필요한회사', '셀빅팀 | 소프트웨어 테스트 및 기술지원', new Date(2003, 7, 1), new Date(2004, 1, 30) ],
-              [ '퓨처텔', 'QE팀 | 단말기 하드웨어 및 소프트웨어 테스트', new Date(2004, 8, 11),  new Date(2005, 2, 28) ],
-              [ '마름모소프트', 'SQA1팀 | 나모인터랙티브 소프트웨어 품질관리 전담', new Date(2005, 3, 24),  new Date(2008, 12, 20) ],
-              [ '홍인터내셔날', 'QA팀 | 리눅스 기반 임베디드 소프트웨어 테스트', new Date(2009, 2, 10),  new Date(2009, 5, 14) ],              
-              [ '마름모소프트', '품질관리실 | 소프트웨어 품질 컨설팅', new Date(2009, 5, 18),  new Date(2010, 3, 10) ],
-              [ '바른손게임즈', 'QA팀 | 국내외 서비스 게임 소프트웨어 품질 관리',new Date(2010, 6, 14),  new Date(2011, 6, 25) ],
-              [ '짱라이브', '운영팀 | 모바일 동영상 서비스 품질 관리', new Date(2011, 6, 27),  new Date(2011, 7, 31) ],
-              [ '세이퍼존', '기술연구소 | 보안 소프트웨어 품질 및 인증 관리',     new Date(2011, 11, 28),  new Date(2013, 4, 20) ],
-              [ '티시스 숭례문지점', '품질개선팀 | 흥국 계열 및 전사 품질 개선 주도',     new Date(2013, 5, 6),  new Date(2014, 1, 15) ],
-              [ '네오블', 'QA팀 | KT 뮤직 Genie 앱 품질 관리', new Date(2014, 3, 27),  new Date(2014, 7, 7) ],  
-              [ '열린기술', '수행본부 | 스마트 팩토리 SI 프로젝트 품질 관리 수행', new Date(2014, 11, 17),  new Date(2017, 6, 30) ],                
-              [ '메조미디어', '운영팀 | 대내/외 광고 솔루션 프로젝트 품질 관리 수행',  new Date(2017, 7, 3),  new Date(2020, 9, 20) ]]);
-            	var options = {
-      		timeline: { rowLabelStyle: {fontSize: 14, color: '#603913' },
-		barLabelStyle: { fontSize: 10 } }
-    		};
-		chart.draw(dataTable);
-        	}
-        </script>
-	<!-- 구글차트, 테이블 -->
-	<script type="text/javascript">
-	google.charts.load('current', {'packages':['table']});
-	google.charts.setOnLoadCallback(drawTable);
-	function drawTable() {
-		var data = new google.visualization.DataTable();
-		data.addColumn('string', '구분');
-		data.addColumn('string', '항목명');
-		data.addColumn('string', '이수');
-		data.addColumn('string', '날짜');
-		data.addColumn('string', '설명');
-		data.addRows([
-		['학교', '호서전산전문학교', '중퇴', '1999/03~2000/02', '정보처리과'],  
-		['학교', '유한대학교', '졸업', '2005/03~2008/02', '산업시스템경영과'],  
-		['학교', '학점은행제', '졸업', '2010/03~2014/02', '정보통신공학사'],  
-		['교육', '소프트웨어 테스트 전문가 교육', '이수', '2005/06', 'TTA'],  
-		['교육', 'CC인증 평가제출물 작성교육', '이수', '2011/12', 'KISA'],  
-		['교육', 'ISP 교육', '이수', '2013/10', 'Tsis 사내 교육'],
-		['교육', '화학 및 건설안전 기술 교육', '이수', '2015/02~2015/03', '멀티캠퍼스 온라인교육'],
-		['교육', '실무사례를 통한 프로젝트 관리 기법 및 적용과 해법', '이수', '2015/06~2015/07', '멀티캠퍼스 온라인교육'],
-		['교육', '웹접근성의 이해(기본)', '이수', '2015/07', '한국정보화진흥원'],
-		['교육', '데이터베이스 관리(DB구조, 인스턴스, 저장영역)', '이수', '2017/05', '한국소프트웨어기술진흥협회'],
-		['교육', 'Data 품질관리', '이수', '2017/05', '한국소프트웨어기술진흥협회'],
-		['자격', '정보처리기능사', '합격', '1998/12', '한국산업인력공단'],
-		['자격', '워드프로세스 1급', '합격', '2002/12', '대한상공회의소'],
-		['자격', '정보처리산업기사', '합격', '2012/08', '한국산업인력공단'],
-		['자격', '정보처리기사', '합격', '2013/08', '한국산업인력공단'],
-		['자격', 'ISTQB Foundation Level', '합격', '2014/08', 'ISTQB'],
-		['자격', '개인정보취급사(CPPF)', '합격', '2016/07', '한국CPO포럼'],
-		['자격', 'OPIC Speaking IL', '합격', '2019/08', 'ACTFL']]);
+<body id="page-top">
+	<nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+	<div class="container">
+	<a class="navbar-brand js-scroll-trigger" href="#page-top">Introduction</a>
+	<button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars"></i></button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#career">career</a>	</li>
+			<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#E_C>EDU&CERT</a></li>
+			<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skillset">skill set</a></li>
+			<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#other">other</a></li>
+		</ul>
+	</div>
+	</div>	
+	</nav>
 
-		var table = new google.visualization.Table(document.getElementById('table_div'));
+<header class="masthead bg-primary text-white text-center">
+<div class="container d-flex align-items-center flex-column">
 
-		table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
-	      }
- 	</script>
-	<!-- Chart JS -->
-	<script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
-	<script src="https://www.chartjs.org/samples/latest/utils.js"></script>
-	<script src="https://www.chartjs.org/samples/latest/charts/area/analyser.js"></script>
-    </head>
-    <body id="page-top">
-        <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Introduction</a>
-                <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">PORTFOLIO</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">ABOUT</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/portfolio/Park4.jpg" alt="박희장 프로필">
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading mb-0">Quality Assurance Engineer</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>IT Generalist &amp; Testing Evangelist</b></p>
-		<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>Test Engineering Specialist</b></p>
-		<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>SW Cetificate Veteran</b></p>
-		<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>Project Management Office</b></p>
-		<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>QA Full stack Engnineer</b></p>
-		<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>Various experience In the IT</b></p>
-        </header>
-        <!-- CAREER, 구글 차트 | 타임라인 -->    
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">CAREER</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                    <center>
-                    <div id="timeline" style=" height: 540px;"></div>
-                    </center>
-                </div>
-            </div>
-        </section>
-        <!-- EDUCATION & Certificate , 구글차트 | 테이블 -->
-         <section class="page-section bg-primary text-white mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading d-inline-block text-white">EDUCATION & CERTIFICATE</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <center>
-			<div id="table_div" style="color: black; height: 540px;"></div>   
-		</center>           
-        </section>
-		 
-        <!-- SKILL SET, chartjs | radar -->    
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">SKILL SET</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                    <center>
+<!-- Masthead Avatar Image-->
+<img class="masthead-avatar mb-5" src="assets/img/portfolio/Park4.jpg" alt="박희장 프로필">
+
+<!-- Masthead Heading-->
+<h1 class="masthead-heading mb-0">Quality Assurance Engineer</h1>
+
+<!-- Icon Divider-->
+<div class="divider-custom divider-light">
+	<div class="divider-custom-line"></div>
+	<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+	<div class="divider-custom-line"></div>
+</div>
+
+<!-- Masthead Subheading-->
+<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>IT Generalist &amp; Testing Evangelist</b></p>
+<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>Test Engineering Specialist</b></p>
+<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>SW Cetificate Veteran</b></p>
+<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>Project Management Office</b></p>
+<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>QA Full stack Engnineer</b></p>
+<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>Various experience In the IT</b></p>
+</header>
+
+
+<!-- CAREER, 구글 차트 | 타임라인 --> 
+<section class="page-section portfolio" id="career">
+	<div class="container">
+		<!-- Section Heading-->
+		<div class="text-center">
+			<h2 class="page-section-heading text-secondary mb-0 d-inline-block">CAREER</h2>
+		</div>
+		
+		<!-- Icon Divider-->
+		<div class="divider-custom">
+			<div class="divider-custom-line"></div>
+			<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+			<div class="divider-custom-line"></div>
+		</div>
+				
+		<div class="text-center" id="timeline" style=" height: 640px;"></div>
+	</div>
+</section>
+
+<!-- EDUCATION & Certificate , 구글차트 | 테이블 -->
+<section class="page-section bg-primary text-white mb-0" id="E_C">
+	<div class="container">
+		<!-- About Section Heading-->
+		<div class="text-center">
+		<h2 class="page-section-heading d-inline-block text-white">EDUCATION & CERTIFICATE</h2>
+	</div>
+	
+	<!-- Icon Divider-->
+	<div class="divider-custom divider-light">
+		<div class="divider-custom-line"></div>
+		<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+		<div class="divider-custom-line"></div>
+	</div>
+
+	<!-- About Section Content-->
+	<div class="text-center" id="table_div" style="color: black; height: 640px;"></div> 
+</section>
+ 
+<!-- SKILL SET, chartjs | radar --> 
+<section class="page-section portfolio" id="skillset">
+	<div class="container">
+		<!-- Portfolio Section Heading-->
+		<div class="text-center">
+		<h2 class="page-section-heading text-secondary mb-0 d-inline-block">SKILL SET</h2>
+	</div>
+	<!-- Icon Divider-->
+	<div class="divider-custom">
+		<div class="divider-custom-line"></div>
+		<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+		<div class="divider-custom-line"></div>
+	</div>
+	
+	<center>
 		<div class="text-center"><h3>Technique</h3></div>
 		<div style="width:100%;margin:0 auto;">
-                   <canvas id="marksChart" class="chartjs" style="width:100vw;height:50vh"></canvas>
-			    </div>
-			<script>
+			<canvas id="marksChart" class="chartjs" style="width:100vw;height:50vh"></canvas>
+		</div>
+	
+		<script>
 			var marksCanvas = document.getElementById("marksChart");
 			var marksData = {
-			  labels: ['QA', 'Testing', 'Methodology', 'PMO & Audit', 'Devops'],
-			  datasets: [{
-		      	    label: "Technique",
-			    backgroundColor: "transparent",
-			    borderColor: "rgba(200,0,0,0.6)",
-			    fill: false,
-			    radius: 6,
-			    pointRadius: 6,
-			    pointBorderWidth: 3,
-			    pointBackgroundColor: "red",
-			    pointBorderColor: "rgba(200,0,0,0.6)",
-			    pointHoverRadius: 10,
-			    data: [95, 95, 90, 90, 90]
-			  }]
+			labels: ['QA', 'Testing', 'Methodology', 'PMO & Audit', 'Devops'],
+			datasets: [{
+			label: "Technique",
+			backgroundColor: "transparent",
+			borderColor: "rgba(200,0,0,0.6)",
+			fill: false,
+			radius: 6,
+			pointRadius: 6,
+			pointBorderWidth: 3,
+			pointBackgroundColor: "red",
+			pointBorderColor: "rgba(200,0,0,0.6)",
+			pointHoverRadius: 10,
+			data: [95, 95, 90, 90, 90]
+			}]
 			};
-
+	
 			var chartOptions = {
-			  scale: {
-			    gridLines: {
-			      color: "gray",
-			      lineWidth: 3
-			    },
-			    angleLines: {
-			      display: false
-			    },
-			    ticks: {
-			      beginAtZero: true,
-			      min: 70,
-			      max: 100,
-			      stepSize:5
-			    },
-			    pointLabels: {
-			      fontSize: 18,
-			      fontColor: "green"
-			    }
-			  },
-			  legend: {
-			    display: false
-			  }
+			scale: {
+			gridLines: {
+			color: "gray",
+			lineWidth: 3
+			},
+			angleLines: {
+			display: false
+			},
+			ticks: {
+			beginAtZero: true,
+			min: 70,
+			max: 100,
+			stepSize:5
+			},
+			pointLabels: {
+			fontSize: 18,
+			fontColor: "green"
+			}
+			},
+			legend: {
+			display: false
+			}
 			};
-
+			
 			var radarChart = new Chart(marksCanvas, {
-			  type: 'radar',
-			  data: marksData,
-			  options: chartOptions
+			type: 'radar',
+			data: marksData,
+			options: chartOptions
 			});
-			</script>			    
-                    </center>
-                </div>
-            </div>
-		  <center>
-		   <div class="text-center"><h3>Skill</h3></div>
+		</script> 
+	</center>
+
+	<center>
+		<div class="text-center"><h3>Skill</h3></div>
 		<div style="width:100%;margin:0 auto;">
-                   <canvas id="marksChart1" class="chartjs" style="width:100vw;height:50vh"></canvas>
-			    </div>
-			<script>
+			<canvas id="marksChart1" class="chartjs" style="width:100vw;height:50vh"></canvas>
+		</div>
+		
+		<script>
 			var marksCanvas = document.getElementById("marksChart1");
 			var marksData = {
-			  labels: ['Funcional Testing', 'Non-functional Testing', 'Test Management', 'Process Management', 'Configuration Management'],
-			  datasets: [{
-		      	    label: "SKILL",
-			    backgroundColor: "transparent",
-			    borderColor: "rgba(200,0,0,0.6)",
-			    fill: false,
-			    radius: 6,
-			    pointRadius: 6,
-			    pointBorderWidth: 3,
-			    pointBackgroundColor: "Yellow",
-			    pointBorderColor: "rgba(200,0,0,0.6)",
-			    pointHoverRadius: 10,
-			    data: [95, 90, 98, 90, 90]
-			  }]
+			labels: ['Funcional Testing', 'Non-functional Testing', 'Test Management', 'Process Management', 'Configuration Management'],
+			datasets: [{
+			label: "SKILL",
+			backgroundColor: "transparent",
+			borderColor: "rgba(200,0,0,0.6)",
+			fill: false,
+			radius: 6,
+			pointRadius: 6,
+			pointBorderWidth: 3,
+			pointBackgroundColor: "Yellow",
+			pointBorderColor: "rgba(200,0,0,0.6)",
+			pointHoverRadius: 10,
+			data: [95, 90, 98, 90, 90]
+			}]
 			};
-
+			
 			var chartOptions = {
-			  scale: {
-			    gridLines: {
-			      color: "glay",
-			      lineWidth: 3
-			    },
-			    angleLines: {
-			      display: false
-			    },
-			    ticks: {
-			      beginAtZero: true,
-			      min: 70,
-			      max: 100,
-			      stepSize:5
-			    },
-			    pointLabels: {
-			      fontSize: 18,
-			      fontColor: "blue"
-			    }
-			  },
-			  legend: {
-			    display: false
-			  } 			  
+			scale: {
+			gridLines: {
+			color: "glay",
+			lineWidth: 3
+			},
+			angleLines: {
+			display: false
+			},
+			ticks: {
+			beginAtZero: true,
+			min: 70,
+			max: 100,
+			stepSize:5
+			},
+			pointLabels: {
+			fontSize: 18,
+			fontColor: "blue"
+			}
+			},
+			legend: {
+			display: false
+			} 
 			};
-
+			
 			var radarChart = new Chart(marksCanvas, {
-			  type: 'radar',
-			  data: marksData,
-			  options: chartOptions
+			type: 'radar',
+			data: marksData,
+			options: chartOptions
 			});
-			</script>			    
-                    </center>
-                </div>
-            </div>
-		<center>
-		   <div class="text-center"><h3>Experience</h3></div>
-                   <div style="width:100%;margin:0 auto;">
-                   <canvas id="marksChart2" class="chartjs" style="width:100vw;height:50vh"></canvas>
-		    </div>
-			<script>
+		</script> 
+	</center>
+		
+	<center>
+		<div class="text-center"><h3>Experience</h3></div>
+		<div style="width:100%;margin:0 auto;">
+			<canvas id="marksChart2" class="chartjs" style="width:100vw;height:50vh"></canvas>
+		</div>
+		
+		<script>
 			var marksCanvas = document.getElementById("marksChart2");
 			var marksData = {
-			  labels: ['System Integration', 'Mobile', 'Web', 'Security', 'Embeded System', 'Game', 'Financal', 'Advertising'],
-			  datasets: [{
-		      	    label: "Experience",
-			    backgroundColor: "transparent",
-			    borderColor: "rgba(200,0,0,0.6)",
-			    fill: false,
-			    radius: 6,
-			    pointRadius: 6,
-			    pointBorderWidth: 3,
-			    pointBackgroundColor: "orange",
-			    pointBorderColor: "rgba(200,0,0,0.6)",
-			    pointHoverRadius: 10,
-			    data: [93, 95, 95, 90, 85, 85, 80, 85]
-			  }]
+			labels: ['System Integration', 'Mobile', 'Web', 'Security', 'Embeded System', 'Game', 'Financal', 'Advertising'],
+			datasets: [{
+			label: "Experience",
+			backgroundColor: "transparent",
+			borderColor: "rgba(200,0,0,0.6)",
+			fill: false,
+			radius: 6,
+			pointRadius: 6,
+			pointBorderWidth: 3,
+			pointBackgroundColor: "orange",
+			pointBorderColor: "rgba(200,0,0,0.6)",
+			pointHoverRadius: 10,
+			data: [93, 95, 95, 90, 85, 85, 80, 85]
+			}]
 			};
-
+			
 			var chartOptions = {
-			  scale: {
-			    gridLines: {
-			      color: "gray",
-			      lineWidth: 3
-			    },
-			    angleLines: {
-			      display: false
-			    },
-			    ticks: {
-			      beginAtZero: true,
-			       min: 70,
-			      max: 100,
-			      stepSize:5
-			    },
-			    pointLabels: {
-			      fontSize: 18,
-			      fontColor: "Purple"
-			    }
-			  },
-			  legend: {
-			    display: false
-			  }			
+			scale: {
+			gridLines: {
+			color: "gray",
+			lineWidth: 3
+			},
+			angleLines: {
+			display: false
+			},
+			ticks: {
+			beginAtZero: true,
+			min: 70,
+			max: 100,
+			stepSize:5
+			},
+			pointLabels: {
+			fontSize: 18,
+			fontColor: "Purple"
+			}
+			},
+			legend: {
+			display: false
+			}
 			};
-
+			
 			var radarChart = new Chart(marksCanvas, {
-			  type: 'radar',
-			  data: marksData,
-			  options: chartOptions
+			type: 'radar',
+			data: marksData,
+			options: chartOptions
 			});
-			</script>			    
-                    </center>
-                </div>
-            </div>
-        </section>
- <section class="page-section bg-primary text-white mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading d-inline-block text-white">EDUCATION & CERTIFICATE</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <center>
-			<div id="table_div" style="color: black; height: 540px;"></div>   
-		</center>           
-        </section>	
+		</script> 
+	</center>
+	
+</section>
 
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">PORTFOLIO</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Portfolio Items-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div><img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="Log Cabin"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Portfolio Modal-->
-        <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal0Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Log Cabin</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="Log Cabin"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal1Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Tasty Cake</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="Tasty Cake"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal2Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Circus Tent</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="Circus Tent"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal3Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Controller</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="Controller"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal4Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Locked Safe</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="Locked Safe"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal5Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Submarine</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="Submarine"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <section class="page-section bg-primary text-white mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading d-inline-block text-white">ABOUT</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ml-auto">
-                        <p class="pre-wrap lead">임베디드 소프트웨어에서 게임, 보안, 모바일, SI, 앱, 광고 영역 전반을 경험한 전천후 엔지니어</p>
-                    </div>
-                    <div class="col-lg-4 mr-auto">
-                        <p class="pre-wrap lead">Test Engineer에서 QA Specialist로 스킬업하여 점차 IT Generalist로 거듭나고 있는 진화형 인간</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="page-section" id="contact">
-            <div class="container">
-                <!-- Contact Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading text-secondary d-inline-block mb-0">CONTACT</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Contact Section Content-->
-                <div class="row justify-content-center">
-                    <div class="col-lg-4">
-                        <div class="d-flex flex-column align-items-center">
-                            <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
-                            <div class="text-muted">Phone</div>
-                            <div class="lead font-weight-bold">(555) 555-5555</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="d-flex flex-column align-items-center">
-                            <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
-                            <div class="text-muted">Email</div><a class="lead font-weight-bold" href="mailto:name@example.com">name@example.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                    <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="mb-4">LOCATION</h4>
-                        <p class="pre-wrap lead mb-0">2215 John Daniel Drive lark, MO 65243</p>
-                    </div>
-                    <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="mb-4">AROUND THE WEB</h4><a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/StartBootstrap"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/sbootstrap"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/startbootstrap"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.dribble.com/startbootstrap"><i class="fab fa-fw fa-dribbble"></i></a>
-                    </div>
-                    <!-- Footer About Text-->
-                    <div class="col-lg-4">
-                        <h4 class="mb-4">ABOUT FREELANCER</h4>
-                        <p class="pre-wrap lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by Start Bootstrap</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Copyright Section-->
-        <section class="copyright py-4 text-center text-white">
-            <div class="container"><small class="pre-wrap">Copyright © Codenamepeter.github.io 2020</small></div>
-        </section>
-        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
-        <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Contact form JS-->
-        <!--
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
-        -->
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+<section class="page-section bg-primary text-white mb-0" id="other">
+	<div class="container">
+	<!-- About Section Heading-->
+	<div class="text-center">
+	<h2 class="page-section-heading d-inline-block text-white">other</h2>
+	</div>
+
+	<!-- Icon Divider-->
+	<div class="divider-custom divider-light">
+		<div class="divider-custom-line"></div>
+		<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+		<div class="divider-custom-line"></div>
+	</div>
+
+	<!-- About Section Content-->
+	<center>
+	other
+	</center> 
+</section>
+
+<section class="page-section portfolio" id="portfolio">
+	<div class="container">
+	<!-- Portfolio Section Heading-->
+	<div class="text-center">
+	<h2 class="page-section-heading text-secondary mb-0 d-inline-block">PORTFOLIO</h2>
+	</div>
+	<!-- Icon Divider-->
+	<div class="divider-custom">
+	<div class="divider-custom-line"></div>
+	<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+	<div class="divider-custom-line"></div>
+	</div>
+	<!-- Portfolio Grid Items-->
+	<div class="row justify-content-center">
+	<!-- Portfolio Items-->
+	<div class="col-md-6 col-lg-4 mb-5">
+	<div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
+	<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+	<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+	</div><img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="Log Cabin"/>
+	</div>
+	</div>
+	</div>
+	</div>
+</section>
+
+<!-- Portfolio Modal-->
+<div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal0Label" aria-hidden="true">
+<div class="modal-dialog modal-xl" role="document">
+<div class="modal-content">
+<button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+<div class="modal-body text-center">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<!-- Portfolio Modal - Title-->
+<h2 class="portfolio-modal-title text-secondary mb-0">Log Cabin</h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="Log Cabin"/>
+<!-- Portfolio Modal - Text-->
+<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+<button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal1Label" aria-hidden="true">
+<div class="modal-dialog modal-xl" role="document">
+<div class="modal-content">
+<button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+<div class="modal-body text-center">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<!-- Portfolio Modal - Title-->
+<h2 class="portfolio-modal-title text-secondary mb-0">Tasty Cake</h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="Tasty Cake"/>
+<!-- Portfolio Modal - Text-->
+<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+<button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal2Label" aria-hidden="true">
+<div class="modal-dialog modal-xl" role="document">
+<div class="modal-content">
+<button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+<div class="modal-body text-center">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<!-- Portfolio Modal - Title-->
+<h2 class="portfolio-modal-title text-secondary mb-0">Circus Tent</h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="Circus Tent"/>
+<!-- Portfolio Modal - Text-->
+<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+<button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal3Label" aria-hidden="true">
+<div class="modal-dialog modal-xl" role="document">
+<div class="modal-content">
+<button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+<div class="modal-body text-center">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<!-- Portfolio Modal - Title-->
+<h2 class="portfolio-modal-title text-secondary mb-0">Controller</h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="Controller"/>
+<!-- Portfolio Modal - Text-->
+<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+<button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal4Label" aria-hidden="true">
+<div class="modal-dialog modal-xl" role="document">
+<div class="modal-content">
+<button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+<div class="modal-body text-center">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<!-- Portfolio Modal - Title-->
+<h2 class="portfolio-modal-title text-secondary mb-0">Locked Safe</h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="Locked Safe"/>
+<!-- Portfolio Modal - Text-->
+<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+<button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal5Label" aria-hidden="true">
+<div class="modal-dialog modal-xl" role="document">
+<div class="modal-content">
+<button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+<div class="modal-body text-center">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<!-- Portfolio Modal - Title-->
+<h2 class="portfolio-modal-title text-secondary mb-0">Submarine</h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="Submarine"/>
+<!-- Portfolio Modal - Text-->
+<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+<button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="page-section bg-primary text-white mb-0" id="about">
+<div class="container">
+<!-- About Section Heading-->
+<div class="text-center">
+<h2 class="page-section-heading d-inline-block text-white">ABOUT</h2>
+</div>
+<!-- Icon Divider-->
+<div class="divider-custom divider-light">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- About Section Content-->
+<div class="row">
+<div class="col-lg-4 ml-auto">
+<p class="pre-wrap lead">임베디드 소프트웨어에서 게임, 보안, 모바일, SI, 앱, 광고 영역 전반을 경험한 전천후 엔지니어</p>
+</div>
+<div class="col-lg-4 mr-auto">
+<p class="pre-wrap lead">Test Engineer에서 QA Specialist로 스킬업하여 점차 IT Generalist로 거듭나고 있는 진화형 인간</p>
+</div>
+</div>
+</div>
+</section>
+<section class="page-section" id="contact">
+<div class="container">
+<!-- Contact Section Heading-->
+<div class="text-center">
+<h2 class="page-section-heading text-secondary d-inline-block mb-0">CONTACT</h2>
+</div>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Contact Section Content-->
+<div class="row justify-content-center">
+<div class="col-lg-4">
+<div class="d-flex flex-column align-items-center">
+<div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
+<div class="text-muted">Phone</div>
+<div class="lead font-weight-bold">(555) 555-5555</div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="d-flex flex-column align-items-center">
+<div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
+<div class="text-muted">Email</div><a class="lead font-weight-bold" href="mailto:name@example.com">name@example.com</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer text-center">
+<div class="container">
+<div class="row">
+<!-- Footer Location-->
+<div class="col-lg-4 mb-5 mb-lg-0">
+<h4 class="mb-4">LOCATION</h4>
+<p class="pre-wrap lead mb-0">2215 John Daniel Drive lark, MO 65243</p>
+</div>
+<!-- Footer Social Icons-->
+<div class="col-lg-4 mb-5 mb-lg-0">
+<h4 class="mb-4">AROUND THE WEB</h4><a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/StartBootstrap"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/sbootstrap"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/startbootstrap"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.dribble.com/startbootstrap"><i class="fab fa-fw fa-dribbble"></i></a>
+</div>
+<!-- Footer About Text-->
+<div class="col-lg-4">
+<h4 class="mb-4">ABOUT FREELANCER</h4>
+<p class="pre-wrap lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by Start Bootstrap</p>
+</div>
+</div>
+</div>
+</footer>
+<!-- Copyright Section-->
+<section class="copyright py-4 text-center text-white">
+<div class="container"><small class="pre-wrap">Copyright © Codenamepeter.github.io 2020</small></div>
+</section>
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+<div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+<!-- Bootstrap core JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!-- Contact form JS-->
+<!--
+<script src="assets/mail/jqBootstrapValidation.js"></script>
+<script src="assets/mail/contact_me.js"></script>
+ -->
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+</body>
 </html>
 
-	
+
