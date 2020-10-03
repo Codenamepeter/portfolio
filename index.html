@@ -354,7 +354,7 @@
 			pointBackgroundColor: "orange",
 			pointBorderColor: "rgba(200,0,0,0.6)",
 			pointHoverRadius: 10,
-			data: [93, 95, 95, 90, 85, 85, 80, 85]
+			data: [94, 97, 95, 90, 83, 87, 83, 88]
 			}]
 			};
 			
@@ -434,7 +434,7 @@
 	<div class="container">
 		<!-- Section Heading-->
 		<div class="text-center">
-			<h2 class="page-section-heading text-secondary mb-0 d-inline-block">Favroite Place</h2>
+			<h2 class="page-section-heading text-secondary mb-0 d-inline-block">Familiar Place</h2>
 		</div>
 		
 		<!-- Icon Divider-->
@@ -559,8 +559,8 @@
 
 			function addMarkerInfo() {
 			    for (var i = 0; i < markersOnMap.length; i++) {
-				var contentString = '<div id="content"><h1>' + markersOnMap[i].placeName +
-				    '</h1><p>Lorem ipsum dolor sit amet, vix mutat posse suscipit id, vel ea tantas omittam detraxit.</p></div>';
+				var contentString = '<div id="content"><h3>' + markersOnMap[i].placeName +
+				    '</h3><p>Familiar place in korea.</p></div>';
 
 				const marker = new google.maps.Marker({
 				    position: markersOnMap[i].LatLng[0],
