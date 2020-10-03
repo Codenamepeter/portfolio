@@ -121,6 +121,9 @@
 				<li class="nav-item mx-0 mx-lg-1">
 					<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#plan">MY PLAN</a>
 				</li>
+				<li class="nav-item mx-0 mx-lg-1">
+					<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#place">PLACE</a>
+				</li>
 				<!--
 				<li class="nav-item mx-0 mx-lg-1">
 					<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">PORTFOLIO</a>
@@ -427,6 +430,35 @@
 	<h6 class="text-center" style="color:#800080;">※ CSS로 Circle 구현 후 이미지 노출</h4>
 </section>
 
+<section class="page-section portfolio" id="place">
+	<div class="container">
+		<!-- Section Heading-->
+		<div class="text-center">
+			<h2 class="page-section-heading text-secondary mb-0 d-inline-block">Favroite Place</h2>
+		</div>
+		
+		<!-- Icon Divider-->
+		<div id="map" style="width:100%; height: 100vh;"></div>
+  		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-3u9XNYT-3NEH_zGRAc9WoZ5frc14FbQ&callback=initMap&region=kr"></script>
+  		<script>
+    			function initMap() {
+      				var seoul = { lat: 37.504743 ,lng: 127.028521 };
+      				var map = new google.maps.Map(document.getElementById('map'), {
+          			zoom: 12,
+          			center: seoul
+        			});      
+    			  	
+				new google.maps.Marker({
+				position: seoul,
+    				map: map,
+    				label: "서울 중심 좌표"
+  				});
+			}
+  		</script>
+		<h6 class="text-center" style="color:#800080;">※ Google API - MAP Javascript 구현</h4>
+	</div>
+</section>	
+	
 			
 <!-- Footer -->
 <footer class="footer text-center">
@@ -450,7 +482,7 @@
 <!-- Footer About Text-->
 <div class="col-lg-4">
 	<h4 class="mb-4">Use Skill</h4>
-	<p class="pre-wrap lead mb-0">Bootstrap, Google Chart(Timeline, Tablechart), ChartJS(Radar), CSS Handling </p>
+	<p class="pre-wrap lead mb-0">Bootstrap, Google Chart(Timeline, Tablechart), ChartJS(Radar), Google API(Map Javascript), Google Analytics, CSS Handling </p>
 </div>
 
 	
