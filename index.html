@@ -446,49 +446,168 @@
 		
 		<div id="map" style="width:100%; height: 100vh;"></div>
   		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-3u9XNYT-3NEH_zGRAc9WoZ5frc14FbQ&callback=initMap&region=kr"></script>
-  		  <script type="text/javascript">
-		    var locations = [
-		      	['결혼 생활, 킹콩인러브', 37.504743, 127.028521],
-		      	['자취 생활, 구로동라이프', 37.489277, 126.889224],
-		     	['종교 생활, 고척동성당', 37.504936, 126.858241],
-		     	['새로운 터전, 분당생활', 37.389862, 127.127039],
-		     	['퓨처텔 - 폐업', 37.394348, 126.963994],
-			['마름모소프트 - 폐업', 37.483170, 127.019986],
-			['바른손게임즈 - 게임사업 종료', 37.654165, 126.770839],
-			['메조미디어', 37.563895, 127.003293],
-			['정말필요한회사', 37.511356, 127.045078],
-			['홍인터내셔날', 37.482489, 126.897273],
-			['세이퍼존', 37.474238, 126.881166],
-			['열린기술', 37.496343, 127.034920],
-			['짱라이브 - 폐업', 37.487153, 127.046923],
-			['티시스 숭례문지점', 37.559595, 126.973762],
-			['KT뮤직 - 현 지니뮤직', 37.513697, 127.062405]
-		    ];
+		    <script>
+			var map;
+			var InforObj = [];
+			var centerCords = {
+			    lat: 37.519618,
+			    lng: 126.998943
+			};
+			var markersOnMap = [{
+				placeName: "결혼 생활, 킹콩인러브'",
+				LatLng: [{
+				    lat: 37.504743, 
+				    lng: 127.028521
+				}]
+			    },
+			    {
+							placeName: "자취 생활, 구로동라이프",
+				LatLng: [{
+				    lat: 37.489277, 
+				    lng: 126.889224
+				}]
+			    },
+			    {
+			placeName: "새로운 터전, 분당생활",
+				LatLng: [{
+				    lat: 37.389862, 
+				    lng: 127.127039
+				}]
+			    },
+			    {
+			placeName: "퓨처텔 - 폐업",
+				LatLng: [{
+				    lat: 37.394348, 
+				    lng: 126.963994
+				}]
+			    },
+			    {
+			placeName: "마름모소프트 - 폐업",
+				LatLng: [{
+				    lat: 37.483170, 
+				    lng: 127.019986
+				}]
+			    },
+			    {
+			placeName: "바른손게임즈 - 게임사업 종료",
+				LatLng: [{
+				    lat: 37.654165, 
+				    lng: 126.770839
+				}]
+			    },
+			    {
+			placeName: "메조미디어 - CJ ENM 계열사",
+				LatLng: [{
+				    lat: 37.563895, 
+				    lng: 127.003293
+				}]
+			    },
+			    {
+			placeName: "정말필요한회사 - 폐업",
+				LatLng: [{
+				    lat: 37.511356, 
+				    lng: 127.045078
+				}]
+			    },
+			    {
+			placeName: "홍인터내셔날",
+				LatLng: [{
+				    lat: 37.482489,  
+				    lng: 126.897273
+				}]
+			    },
+			    {
+			placeName: "세이퍼존",
+				LatLng: [{
+				    lat: 37.474238,  
+				    lng: 126.881166
+				}]
+			    },
+			    {
+			placeName: "열린기술",
+				LatLng: [{
+				    lat: 37.496343,  
+				    lng: 127.034920
+				}]
+			    },
+			    {
+			placeName: "짱라이브 - 폐업",
+				LatLng: [{
+				    lat: 37.487153,
+				    lng: 127.046923
+				}]
+			    },
+			    {
+			placeName: "티시스 숭례문지점",
+				LatLng: [{
+				    lat: 37.559595,
+				    lng: 126.973762
+				}]
+			    },
+			    {
+			placeName: "KT뮤직 - 현 지니뮤직",
+				LatLng: [{
+				    lat: 37.513697, 
+				    lng: 127.062405
+				}]
+			    }
 
-		    var map = new google.maps.Map(document.getElementById('map'), {
-		      zoom: 10,
-		      center: new google.maps.LatLng(-33.92, 151.25),
-		      mapTypeId: google.maps.MapTypeId.ROADMAP
-		    });
+			window.onload = function () {
+			    initMap();
+			};
 
-		    var infowindow = new google.maps.InfoWindow();
+			function addMarkerInfo() {
+			    for (var i = 0; i < markersOnMap.length; i++) {
+				var contentString = '<div id="content"><h1>' + markersOnMap[i].placeName +
+				    '</h1><p>Lorem ipsum dolor sit amet, vix mutat posse suscipit id, vel ea tantas omittam detraxit.</p></div>';
 
-		    var marker, i;
+				const marker = new google.maps.Marker({
+				    position: markersOnMap[i].LatLng[0],
+				    map: map
+				});
 
-		    for (i = 0; i < locations.length; i++) {  
-		      marker = new google.maps.Marker({
-			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-			map: map
-		      });
+				const infowindow = new google.maps.InfoWindow({
+				    content: contentString,
+				    maxWidth: 200
+				});
 
-		      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-			return function() {
-			  infowindow.setContent(locations[i][0]);
-			  infowindow.open(map, marker);
+				marker.addListener('click', function () {
+				    closeOtherInfo();
+				    infowindow.open(marker.get('map'), marker);
+				    InforObj[0] = infowindow;
+				});
+				// marker.addListener('mouseover', function () {
+				//     closeOtherInfo();
+				//     infowindow.open(marker.get('map'), marker);
+				//     InforObj[0] = infowindow;
+				// });
+				// marker.addListener('mouseout', function () {
+				//     closeOtherInfo();
+				//     infowindow.close();
+				//     InforObj[0] = infowindow;
+				// });
+			    }
 			}
-		      })(marker, i));
-		    }
-		  </script>
+
+			function closeOtherInfo() {
+			    if (InforObj.length > 0) {
+				/* detach the info-window from the marker ... undocumented in the API docs */
+				InforObj[0].set("marker", null);
+				/* and close it */
+				InforObj[0].close();
+				/* blank the array */
+				InforObj.length = 0;
+			    }
+			}
+
+			function initMap() {
+			    map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 11,
+				center: centerCords
+			    });
+			    addMarkerInfo();
+			}
+		    </script>
 		<h6 class="text-center" style="color:#800080;">※ Google API - MAP Javascript 구현</h4>
 	</div>
 </section>	
