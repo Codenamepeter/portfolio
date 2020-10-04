@@ -6,12 +6,7 @@
 		<meta name="description" content="Portfolio">
 		<meta name="author" content="CodeName Peter">
 		<title>QA Engineer | Park hee jang</title>
-		
-		<!--BXslider -->
- 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
- 		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-		
+				
 		<!-- Font Awesome icons (free version)-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
 		
@@ -20,7 +15,7 @@
 		
 		<!-- Fonts CSS-->
 		<link rel="stylesheet" href="css/heading.css">
-		<link rel="stylesheet" href="css/body.css">
+		<link rel="stylesheet" href="css/body.css">		
 		<link rel="shortcut icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
 		
@@ -111,7 +106,48 @@
           		google_ad_client: "ca-pub-7587141354632937",
           		enable_page_level_ads: true
      			});
-	</script>	
+	</script>
+	<!-- ul li를 이용한 갤러리 스크립트 -->
+	<link rel="stylesheet" href="css/ul.css">
+	<script>
+		var gall  = setInterval(galleryFun, 2000);
+  		var inter = true;
+  		var idx = 2;
+  
+   		function galleryFun(){
+          		$(".gallery ul").animate({
+     			   "left":-300*idx+"px"
+      			},300);
+     			$(".g_item ul li").eq(idx-1).addClass("on").siblings().removeClass("on");
+     			idx++;
+     			if(idx> $(".gallery ul li").length-3){
+       			$(".gallery ul").animate({
+         		"left":0
+       			},0);
+       			idx=0;
+       			}
+   		}
+   
+   		$(".gallery , .g_item").hover(function(){
+     			if(inter==true){
+       			clearInterval(gall);
+       			inter=false;
+     		}
+   		},function(){
+     			if(inter==false){
+       			gall  = setInterval(galleryFun, 2000);
+       			inter=true;
+     			}     
+   		});
+      
+   		$(".g_item ul li").on('click',function(){
+     		$(this).addClass("on").siblings().removeClass("on");
+     		idx = $(this).index()+1;
+     		$(".gallery ul").animate({
+        	"left":-300*idx+"px"
+      		},1000);
+      		});
+	</script>
 </head>
 
 <body id="page-top">
@@ -637,36 +673,37 @@
 		<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
 		<div class="divider-custom-line"></div>
 	</div>
-	
-		<div class="bxslider">
-			<div><img src="assets/bxslider/1.jpg" title="1"></div>
-			<div><img src="assets/bxslider/2.jpg" title="1"></div>
-			<div><img src="assets/bxslider/3.jpg" title="1"></div>
-			<div><img src="assets/bxslider/4.png" title="1"></div>
-			<div><img src="assets/bxslider/5.jpg" title="1"></div>
-			<div><img src="assets/bxslider/6.png" title="1"></div>
-			<div><img src="assets/bxslider/7.jpg" title="1"></div>
-			<div><img src="assets/bxslider/8.jpg" title="1"></div>
-			<div><img src="assets/bxslider/9.jpg" title="1"></div>
-			<div><img src="assets/bxslider/10.jpg" title="1"></div>
-			<div><img src="assets/bxslider/11.jpg" title="1"></div>
-			<div><img src="assets/bxslider/12.jpg" title="1"></div>
-			<div><img src="assets/bxslider/13.jpg" title="1"></div>
-			<div><img src="assets/bxslider/14.jpg" title="1"></div>
-			<div><img src="assets/bxslider/15.jpg" title="1"></div>
-			<div><img src="assets/bxslider/16.png" title="1"></div>
-			<div><img src="assets/bxslider/17.png" title="1"></div>
-			<div><img src="assets/bxslider/18.png" title="1"></div>	
-		</div>
-		<script>
-			$(function(){
-			  $('.bxslider').bxSlider({
-			    mode: 'fade',
-			    captions: true,
-			    slideWidth: 600
-			  });
-			});
-	 	</script>
+	<div class="gallery">
+	<ul class="clearfix">
+		<li><div class="img">><img src="assets/bxslider/1.jpg" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/2.jpg" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/3.jpg" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/4.png" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/5.jpg" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/6.png" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/7.jpg" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/8.jpg" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/9.jpg" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/10.jpg" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/11.jpg" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/12.jpg" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/13.jpg" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/14.jpg" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/15.jpg" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/16.png" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/17.png" title="1"></div></li>
+		<li><div class="img">><img src="assets/bxslider/18.png" title="1"></div></li>	
+	</ul>
+	</div>
+
+	<div class="g_item">
+	  <ul>
+	    <li class="on"></li>
+	    <li></li>
+	    <li></li>
+	    <li></li>
+	    <li></li>
+	  </ul>
 	</div>
 </section>	
 		
