@@ -11,13 +11,6 @@
  		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
  		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-		<script>
- 			$(document).ready(function(){
-			$('.slider').bxSlider({
-			mode: 'fade',captions: true, slideWidth: 1000, auto: true
-			});
-			});
-	 	</script>
 		
 		<!-- Font Awesome icons (free version)-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
@@ -632,10 +625,11 @@
 
 <section class="page-section bg-primary text-white mb-0" id="portfolio">
 	<div class="container">
-	<!-- About Section Heading-->
-	<div class="text-center">
-	<h2 class="page-section-heading d-inline-block text-white">PORTFOLIO</h2>
-	</div>
+	
+		<!-- About Section Heading-->
+		<div class="text-center">
+			<h2 class="page-section-heading d-inline-block text-white">PORTFOLIO</h2>
+		</div>
 
 	<!-- Icon Divider-->
 	<div class="divider-custom divider-light">
@@ -644,29 +638,36 @@
 		<div class="divider-custom-line"></div>
 	</div>
 	
-	<div class="slider">
-		<div><img src="assets/bxslider/1.jpg" title="1"></div>
-		<div><img src="assets/bxslider/2.jpg" title="1"></div>
-		<div><img src="assets/bxslider/3.jpg" title="1"></div>
-		<div><img src="assets/bxslider/4.png" title="1"></div>
-		<div><img src="assets/bxslider/5.jpg" title="1"></div>
-		<div><img src="assets/bxslider/6.png" title="1"></div>
-		<div><img src="assets/bxslider/7.jpg" title="1"></div>
-		<div><img src="assets/bxslider/8.jpg" title="1"></div>
-		<div><img src="assets/bxslider/9.jpg" title="1"></div>
-		<div><img src="assets/bxslider/10.jpg" title="1"></div>
-		<div><img src="assets/bxslider/11.jpg" title="1"></div>
-		<div><img src="assets/bxslider/12.jpg" title="1"></div>
-		<div><img src="assets/bxslider/13.jpg" title="1"></div>
-		<div><img src="assets/bxslider/14.jpg" title="1"></div>
-		<div><img src="assets/bxslider/15.jpg" title="1"></div>
-		<div><img src="assets/bxslider/16.png" title="1"></div>
-		<div><img src="assets/bxslider/17.png" title="1"></div>
-		<div><img src="assets/bxslider/18.png" title="1"></div>	
+		<div class="bxslider">
+			<div><img src="assets/bxslider/1.jpg" title="1"></div>
+			<div><img src="assets/bxslider/2.jpg" title="1"></div>
+			<div><img src="assets/bxslider/3.jpg" title="1"></div>
+			<div><img src="assets/bxslider/4.png" title="1"></div>
+			<div><img src="assets/bxslider/5.jpg" title="1"></div>
+			<div><img src="assets/bxslider/6.png" title="1"></div>
+			<div><img src="assets/bxslider/7.jpg" title="1"></div>
+			<div><img src="assets/bxslider/8.jpg" title="1"></div>
+			<div><img src="assets/bxslider/9.jpg" title="1"></div>
+			<div><img src="assets/bxslider/10.jpg" title="1"></div>
+			<div><img src="assets/bxslider/11.jpg" title="1"></div>
+			<div><img src="assets/bxslider/12.jpg" title="1"></div>
+			<div><img src="assets/bxslider/13.jpg" title="1"></div>
+			<div><img src="assets/bxslider/14.jpg" title="1"></div>
+			<div><img src="assets/bxslider/15.jpg" title="1"></div>
+			<div><img src="assets/bxslider/16.png" title="1"></div>
+			<div><img src="assets/bxslider/17.png" title="1"></div>
+			<div><img src="assets/bxslider/18.png" title="1"></div>	
+		</div>
+		<script>
+			$(function(){
+			  $('.bxslider').bxSlider({
+			    mode: 'fade',
+			    captions: true,
+			    slideWidth: 600
+			  });
+			});
+	 	</script>
 	</div>
-</cente
-		
-		
 </section>	
 		
 <!-- Footer -->
