@@ -7,6 +7,18 @@
 		<meta name="author" content="CodeName Peter">
 		<title>QA Engineer | Park hee jang</title>
 		
+		<!--BXslider -->
+ 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ 		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+		<script>
+ 			$(document).ready(function(){
+			$('.slider').bxSlider({
+			mode: 'fade',captions: true, slideWidth: 1000, auto: true
+			});
+			});
+	 	</script>
+		
 		<!-- Font Awesome icons (free version)-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
 		
@@ -106,19 +118,7 @@
           		google_ad_client: "ca-pub-7587141354632937",
           		enable_page_level_ads: true
      			});
-</script>	
-
-	<!--BXslider -->
- 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
- 	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-		 <script>
-		var j = jQuery.noConFlict();
-			j('.bxslider').bxSlider({
-			mode: 'fade',captions: true, slideWidth: 1000, auto: true
-			});			
-		 </script>
-	
+	</script>	
 </head>
 
 <body id="page-top">
@@ -644,7 +644,7 @@
 		<div class="divider-custom-line"></div>
 	</div>
 	
-	<div class="bxslider">
+	<div class="slider">
 		<div><img src="assets/bxslider/1.jpg" title="1"></div>
 		<div><img src="assets/bxslider/2.jpg" title="1"></div>
 		<div><img src="assets/bxslider/3.jpg" title="1"></div>
