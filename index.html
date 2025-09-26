@@ -3,22 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  <meta name="description" content="Peter's QA Portfolio"/>
-  <meta name="keywords" content="QA, Testing, Quality, Process, PMO, Function, Audit, CMMi, PMBOK, Codename Peter"/>
-  <meta name="author" content="CodeName Peter"/>
-  <title>QA Engineer | Park heejang</title>
+  <meta name="description" content="Park Heejang (Peter) — QA Engineer Portfolio"/>
+  <meta name="keywords" content="QA, Testing, PMO, CI/CD, ISTQB, Park Heejang"/>
+  <meta name="author" content="Park Heejang">
 
-  <!-- Open Graph / Twitter (공유시 미리보기 개선) -->
-  <meta property="og:title" content="QA Engineer | Park heejang">
-  <meta property="og:description" content="Professional Quality Assurance Portfolio by Park heejang">
-  <meta property="og:type" content="website">
+  <title>QA Engineer | Park Heejang</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="QA Engineer | Park Heejang">
+  <meta property="og:description" content="Professional QA Portfolio of Park Heejang">
   <meta property="og:image" content="assets/img/portfolio/park_3.png">
-  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Font Awesome -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
 
-  <!-- Core CSS -->
+  <!-- Core CSS (원본 경로 유지) -->
   <link href="css/styles.css" rel="stylesheet">
   <link rel="stylesheet" href="css/heading.css">
   <link rel="stylesheet" href="css/body.css">
@@ -27,10 +26,10 @@
   <link rel="shortcut icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
   <link rel="icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
 
-  <!-- Google Charts (timeline + table) -->
+  <!-- Google Charts -->
   <script src="https://www.gstatic.com/charts/loader.js"></script>
 
-  <!-- Chart.js (v2.9.3 호환성 - 원본 스크립트 기준) -->
+  <!-- Chart.js (원본 버전 호환) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
   <!-- Google Analytics (원본 ID 유지) -->
@@ -43,12 +42,18 @@
   </script>
 
   <style>
-    /* 간단 CSS 보완 (원하시면 더 정교하게 분리해 드립니다) */
+    /* 간단한 보완 스타일 (필요시 css/styles.css로 옮기세요) */
     .text-purple { color: #800080; }
     .circle { border-radius: 50%; max-width: 220px; }
     .masthead-subheading { margin: .25rem 0; }
+    .project-card { background: #fff; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; color:#222; }
+    .project-meta { font-size: .95rem; color:#444; margin-bottom:.5rem; }
+    .starr { margin-top:.5rem; }
+    .starr dt { font-weight:700; margin-top:.4rem; }
+    .starr dd { margin-left:0; margin-bottom:.5rem; }
   </style>
 </head>
+
 <body id="page-top">
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav" aria-label="Main Navigation">
@@ -61,12 +66,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#career">CAREER</a></li>
-          <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#edu">EDUCATION</a></li>
-          <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skill">SKILL</a></li>
-          <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">PORTFOLIO</a></li>
-          <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#place">PLACE</a></li>
-          <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#plan">PLAN</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#career">CAREER</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#edu">EDUCATION</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skill">SKILL</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">PORTFOLIO</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#place">PLACE</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#plan">PLAN</a></li>
         </ul>
       </div>
     </div>
@@ -76,7 +81,7 @@
   <header class="masthead bg-primary text-white text-center" style="padding-top:5.5rem;">
     <div class="container d-flex align-items-center flex-column">
       <img class="circle" src="assets/img/portfolio/park_3.png" alt="박희장 프로필">
-      <h1 class="masthead-heading mb-0">Park heejang (Peter)</h1>
+      <h1 class="masthead-heading mb-0">Park Heejang (Peter)</h1>
 
       <div class="divider-custom divider-light" aria-hidden="true">
         <div class="divider-custom-line"></div>
@@ -85,12 +90,8 @@
       </div>
 
       <h3 class="masthead-subheading font-weight-light mb-0">Professional Quality Assurance Engineer</h3>
-      <p class="masthead-subheading font-weight-light mb-0"><strong>IT Generalist &amp; Testing Evangelist</strong></p>
-      <p class="masthead-subheading font-weight-light mb-0"><strong>Test Engineering Specialist</strong></p>
-      <p class="masthead-subheading font-weight-light mb-0"><strong>SW Certificate Veteran</strong></p>
-      <p class="masthead-subheading font-weight-light mb-0"><strong>Project Management Office</strong></p>
-      <p class="masthead-subheading font-weight-light mb-0"><strong>QA Full stack Engineer</strong></p>
-      <p class="masthead-subheading font-weight-light mb-0"><strong>Various experience In the IT</strong></p>
+      <p class="masthead-subheading font-weight-light mb-0"><strong>IT Generalist · Test Engineering Specialist · PMO</strong></p>
+      <p class="masthead-subheading font-weight-light mb-0"><strong>CI/CD · Automation · Security & Compliance</strong></p>
     </div>
   </header>
 
@@ -107,16 +108,17 @@
       </div>
 
       <div class="text-center" id="timeline" style="height:540px;"></div>
-      <h6 class="text-center text-purple">※ Google Chart - Timelines 구현</h6>
+      <h6 class="text-center text-purple">※ Google Chart - Timelines 구현 (경력 원문 반영) :contentReference[oaicite:1]{index=1}</h6>
     </div>
   </section>
 
-  <!-- EDUCATION & CERTIFICATE (Table) -->
+  <!-- EDUCATION & CERT -->
   <section class="page-section bg-primary text-white mb-0" id="edu">
     <div class="container">
       <div class="text-center">
         <h2 class="page-section-heading d-inline-block text-white">EDUCATION & CERTIFICATE</h2>
       </div>
+
       <div class="divider-custom divider-light">
         <div class="divider-custom-line"></div>
         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
@@ -129,211 +131,172 @@
     </div>
   </section>
 
-  <!-- SKILL SET (Chart.js Radar) -->
+  <!-- SKILL SET -->
   <section class="page-section portfolio" id="skill">
     <div class="container">
       <div class="text-center">
         <h2 class="page-section-heading text-secondary mb-0 d-inline-block">SKILL SET</h2>
       </div>
-      <div class="divider-custom">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-        <div class="divider-custom-line"></div>
+      <div class="divider-custom"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-star"></i></div><div class="divider-custom-line"></div></div>
+
+      <div class="text-center mb-4"><h3>[Technique]</h3></div>
+      <div style="max-width:900px;margin:0 auto;">
+        <canvas id="techniqueChart" style="width:100%; height: 320px;"></canvas>
       </div>
 
-      <center>
-        <div class="text-center"><h3>[Technique]</h3></div>
-        <div style="width:100%;margin:0 auto;">
-          <canvas id="marksChart" class="chartjs" style="width:100vw;height:30vh"></canvas>
-        </div>
+      <div class="text-center my-4"><h3>[Skill]</h3></div>
+      <div style="max-width:900px;margin:0 auto;">
+        <canvas id="skillChart" style="width:100%; height: 320px;"></canvas>
+      </div>
 
-        <script>
-          (function(){
-            var marksCanvas = document.getElementById("marksChart");
-            var marksData = {
-              labels: ['QA', 'Testing', 'Methodology', 'PMO & Audit', 'Devops'],
-              datasets: [{
-                label: "Technique",
-                backgroundColor: "transparent",
-                borderColor: "rgba(200,0,0,0.6)",
-                fill: false,
-                radius: 6,
-                pointRadius: 6,
-                pointBorderWidth: 3,
-                pointBackgroundColor: "red",
-                pointBorderColor: "rgba(200,0,0,0.6)",
-                pointHoverRadius: 10,
-                data: [98, 99, 90, 90, 88]
-              }]
-            };
+      <div class="text-center my-4"><h3>[Experience]</h3></div>
+      <div style="max-width:900px;margin:0 auto;">
+        <canvas id="experienceChart" style="width:100%; height: 320px;"></canvas>
+      </div>
 
-            var chartOptions = {
-              scale: {
-                gridLines: { color: "gray", lineWidth: 3 },
-                angleLines: { display: false },
-                ticks: { beginAtZero: true, min: 70, max: 100, stepSize:5 },
-                pointLabels: { fontSize: 18, fontColor: "green" }
-              },
-              legend: { display: false }
-            };
-
-            new Chart(marksCanvas, { type: 'radar', data: marksData, options: chartOptions });
-          })();
-        </script>
-      </center>
-
-      <center>
-        <br>
-        <div class="text-center"><h3>[Skill]</h3></div>
-        <div style="width:100%;margin:0 auto;">
-          <canvas id="marksChart1" class="chartjs" style="width:100vw;height:30vh"></canvas>
-        </div>
-
-        <script>
-          (function(){
-            var marksCanvas1 = document.getElementById("marksChart1");
-            var marksData1 = {
-              labels: ['Test Mgt','Func Test', 'N-Func Test', 'Process Mgt', 'Config Mgt'],
-              datasets: [{
-                label: "SKILL",
-                backgroundColor: "transparent",
-                borderColor: "rgba(200,0,0,0.6)",
-                fill: false,
-                radius: 6,
-                pointRadius: 6,
-                pointBorderWidth: 3,
-                pointBackgroundColor: "Yellow",
-                pointBorderColor: "rgba(200,0,0,0.6)",
-                pointHoverRadius: 10,
-                data: [98, 95, 92, 93, 90]
-              }]
-            };
-
-            var chartOptions1 = {
-              scale: {
-                gridLines: { color: "gray", lineWidth: 3 },
-                angleLines: { display: false },
-                ticks: { beginAtZero: true, min: 70, max: 100, stepSize:5 },
-                pointLabels: { fontSize: 18, fontColor: "blue" }
-              },
-              legend: { display: false }
-            };
-
-            new Chart(marksCanvas1, { type: 'radar', data: marksData1, options: chartOptions1 });
-          })();
-        </script>
-      </center>
-
-      <center>
-        <br>
-        <div class="text-center"><h3>[Experience]</h3></div>
-        <div style="width:100%;margin:0 auto;">
-          <canvas id="marksChart2" class="chartjs" style="width:100vw;height:30vh"></canvas>
-        </div>
-
-        <script>
-          (function(){
-            var marksCanvas2 = document.getElementById("marksChart2");
-            var marksData2 = {
-              labels: ['System Integration', 'Mobile', 'Web', 'Security', 'Embeded', 'Game', 'Financal', 'Advertising'],
-              datasets: [{
-                label: "Experience",
-                backgroundColor: "transparent",
-                borderColor: "rgba(200,0,0,0.6)",
-                fill: false,
-                radius: 6,
-                pointRadius: 6,
-                pointBorderWidth: 3,
-                pointBackgroundColor: "orange",
-                pointBorderColor: "rgba(200,0,0,0.6)",
-                pointHoverRadius: 10,
-                data: [94, 97, 95, 90, 83, 87, 83, 88]
-              }]
-            };
-
-            var chartOptions2 = {
-              scale: {
-                gridLines: { color: "gray", lineWidth: 3 },
-                angleLines: { display: false },
-                ticks: { beginAtZero: true, min: 70, max: 100, stepSize:5 },
-                pointLabels: { fontSize: 18 }
-              },
-              legend: { display: false }
-            };
-
-            new Chart(marksCanvas2, { type: 'radar', data: marksData2, options: chartOptions2 });
-          })();
-        </script>
-        <br/><br/>
-        <h6 class="text-center text-purple">※ Chartjs - Radar Chart 구현</h6>
-      </center>
+      <h6 class="text-center text-purple">※ Chart.js - Radar Chart 구현</h6>
     </div>
   </section>
 
-  <!-- PORTFOLIO (iframe) -->
+  <!-- PORTFOLIO: Projects with STARR (원본 경력기술서 기반 상세 기술) -->
   <section class="page-section bg-primary text-white mb-0" id="portfolio">
     <div class="container">
       <div class="text-center">
-        <h2 class="page-section-heading d-inline-block text-white">PORTFOLIO</h2>
-      </div>
-      <div class="divider-custom divider-light">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-        <div class="divider-custom-line"></div>
+        <h2 class="page-section-heading d-inline-block text-white">PORTFOLIO (Selected Projects & Achievements)</h2>
       </div>
 
-      <iframe src="https://codenamepeter.github.io/portfolio/slidertest.html" frameborder="0" style="width:100%; height: 800px;" scrolling="no"></iframe>
-      <h6 class="text-center text-purple">※ JQuery - BxSlider | iframe 구현</h6>
+      <div class="divider-custom divider-light"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-star"></i></div><div class="divider-custom-line"></div></div>
+
+      <!-- Project: CJ 메조미디어 (차세대 AD Tech 품질관리 & PMO) -->
+      <div class="project-card" role="article" aria-labelledby="proj-cj">
+        <h4 id="proj-cj">CJ 메조미디어 — 차세대 AD Tech 품질관리 및 PMO (2022.01 ~ 현재)</h4>
+        <div class="project-meta">역할: 차장 · 책임: QA Lead / PMO / Scrum Master · 기술: GitLab, Jenkins, Nexus, JIRA, Slack, SonarQube, CI/CD</div>
+
+        <dl class="starr">
+          <dt>Situation</dt>
+          <dd>DA/SA 광고 상품의 차세대 플랫폼 전환 프로젝트로, 가용성·무중단 배포·광고 무결성 확보가 핵심 요구사항이었습니다.</dd>
+
+          <dt>Task</dt>
+          <dd>전사적 CI/CD 파이프라인 구축과 테스트 전략 수립, Agile 전환(스크럼 도입)·PMO 운영을 통해 신뢰성 높은 서비스 런칭을 달성해야 했습니다.</dd>
+
+          <dt>Action</dt>
+          <dd>
+            - 광고 상품 요구사항(DA/SA) 기반 테스트 전략(기능/비기능/통합/정산 검증) 수립 및 이행<br>
+            - GitLab·Jenkins·Nexus 연동으로 빌드/배포 파이프라인 자동화, SonarQube로 코드 품질 모니터링 적용<br>
+            - 스크럼 마스터 역할 수행으로 스프린트 체계화 및 조직 간 커뮤니케이션 개선(데일리/리트로/PI 플래닝)
+          </dd>
+
+          <dt>Result</dt>
+          <dd>
+            - 차세대 시스템 런칭 후 장애 발생 **0건** 달성(운영 안정화) — 매출·광고 송출 영향 차단<br>
+            - 조직간 Silo 제거 및 Agility 확보, 우수사원 표창 수여(’22.12)
+          </dd>
+
+          <dt>Reflection</dt>
+          <dd>테스트 자동화와 CI/CD의 조화가 제품 신뢰성에 결정적임을 확인. 향후에는 카나리 배포/블루그린에 성능 테스트를 더 결합할 계획입니다.</dd>
+        </dl>
+      </div>
+
+      <!-- Project: 열린기술 (SI / PMO / PPQA) -->
+      <div class="project-card" role="article" aria-labelledby="proj-opentech">
+        <h4 id="proj-opentech">열린기술 — SI(스마트팩토리) 품질관리 및 PMO (2014.11 ~ 2017.06)</h4>
+        <div class="project-meta">역할: 과장 · 책임: PPQA, PMO · 기술: JIRA, VoC/ITSM, IEC61508 기반 위험기반테스트</div>
+
+        <dl class="starr">
+          <dt>Situation</dt>
+          <dd>스마트팩토리 SI/SM 프로젝트에서 고객 인수 산출물의 완성도와 운영프로세스 고도화가 요구되었습니다.</dd>
+
+          <dt>Task</dt>
+          <dd>프로젝트 산출물 검토, 품질영역 진도·이슈 관리, Tiger-Team 형태의 긴급 대응 체계 구축이 과제였습니다.</dd>
+
+          <dt>Action</dt>
+          <dd>
+            - 산출물 리뷰 프로세스 표준화 및 PPQA 감사 수행<br>
+            - JIRA/Confluence 기반 VoC·ITSM 흐름 구성 및 카노모델로 우선순위 관리<br>
+            - IEC 61508 관련 위험 기반 테스트 설계(정비/안전 모듈)
+          </dd>
+
+          <dt>Result</dt>
+          <dd>
+            - 고객 인수 Deliverables 완성도 향상, 복수 고객사(삼성 정밀화학 등)로부터 우수 협력사 선정<br>
+            - GS인증 1등급 획득 주도(여러 건) 및 전사 우수사원 포상(’15.12)
+          </dd>
+
+          <dt>Reflection</dt>
+          <dd>표준화된 품질관리 프로세스가 고객 신뢰와 장기 매출로 연결됨을 확인. 프로세스 자동화(검토 체크리스트 자동화 등) 필요성 인지.</dd>
+        </dl>
+      </div>
+
+      <!-- Project: 티시스 (금융권 전사 품질 개선) -->
+      <div class="project-card" role="article" aria-labelledby="proj-tisis">
+        <h4 id="proj-tisis">티시스 숭례문지점 — 금융 전사 품질개선 (2013.05 ~ 2014.01)</h4>
+        <div class="project-meta">역할: 대리 · 책임: 품질관리, 비기능 테스트 · 기술: JMeter, Threshold 설정, PMO</div>
+
+        <dl class="starr">
+          <dt>Situation</dt>
+          <dd>금융(흥국 계열) 프로젝트로 비기능 요구를 충족하고 규제(AML/KYC 등)에 맞춘 품질 확보가 필요했습니다.</dd>
+
+          <dt>Task</dt>
+          <dd>성능 검증(가용성·스케일), 사용성 개선 제언, 규제 준수를 만족시키는 테스트 전략 수립이 과제였습니다.</dd>
+
+          <dt>Action</dt>
+          <dd>
+            - JMeter로 Ramp-up 테스트 설계 및 Threshold 기반 성능 검증<br>
+            - 사용성 체크리스트 작성 및 개선 권고안 제시<br>
+            - CMMi/ISO 기반 프로세스 정비와 사내 교육 실시
+          </dd>
+
+          <dt>Result</dt>
+          <dd>
+            - FDS 성능 요구사항 충족 및 AML/KYC 관련 비기능 요구사항 검증 완료<br>
+            - 표준 산출물 도입으로 운영 안정성 증대
+          </dd>
+
+          <dt>Reflection</dt>
+          <dd>금융 규제 대응 시 테스트의 ‘재현성’과 ‘증거 문서화’가 중요. 테스트 아티팩트(시나리오, 로그, 재현 단계)를 표준템플릿화 했습니다.</dd>
+        </dl>
+      </div>
+
+      <!-- 간략히 다른 경력들 (요약) -->
+      <div class="project-card" role="article" aria-labelledby="proj-summary">
+        <h4 id="proj-summary">기타 주요 경력 요약 (요약본)</h4>
+        <ul>
+          <li><strong>세이퍼존 (2011.11 ~ 2013.04)</strong> — 보안요구사항/인증(CC, GS) 총괄: 인증 획득으로 조달·매출 창구 확보.</li>
+          <li><strong>바른손게임즈 (2010.06 ~ 2011.06)</strong> — 게임 QA: 글로벌 로컬라이제이션·대규모 업데이트 품질 관리(장애 0건 달성 사례 포함).</li>
+          <li><strong>마름모소프트 등 (2005 ~ 2010)</strong> — SQA/컨설팅·웹 접근성/국책사업 수행.</li>
+        </ul>
+      </div>
+
+      <h6 class="text-center text-purple">※ 각 프로젝트는 STARR 흐름으로 정리했으며, 필요 시 증빙(스크린샷·로그·보고서)을 캡션과 함께 첨부해주세요. (원문 경력기술서 기반) :contentReference[oaicite:2]{index=2}</h6>
     </div>
   </section>
 
-  <!-- PLACE (Google Map) -->
+  <!-- PLACE (Map) -->
   <section class="page-section portfolio" id="place">
     <div class="container">
       <div class="text-center">
         <h2 class="page-section-heading text-secondary mb-0 d-inline-block">FAMILIAR PLACE</h2>
       </div>
-      <div class="divider-custom">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-        <div class="divider-custom-line"></div>
-      </div>
+      <div class="divider-custom"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-star"></i></div><div class="divider-custom-line"></div></div>
 
       <div id="map" style="width:100%; height:50vh;"></div>
-
       <h6 class="text-center text-purple">※ Google API - MAP Javascript 구현</h6>
     </div>
   </section>
 
   <!-- PLAN -->
   <section class="page-section bg-primary text-white mb-0" id="plan">
-    <div class="container">
-      <div class="text-center">
-        <h2 class="page-section-heading d-inline-block text-white">Plans for the future</h2>
-      </div>
-      <div class="divider-custom divider-light">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-        <div class="divider-custom-line"></div>
-      </div>
+    <div class="container text-center">
+      <h2 class="page-section-heading d-inline-block text-white">Plans for the future</h2>
+      <div class="divider-custom divider-light"><div class="divider-custom-line"></div><div class="divider-custom-icon"><i class="fas fa-star"></i></div><div class="divider-custom-line"></div></div>
 
-      <center>
-        <img class="circle" src="assets/img/portfolio/park_1.png" alt="박희장 프로필1">
-        <br><br>
-        <h5 class="text-center text-purple">나는 최고의 'Technician'이 되는 꿈을 꾸고 있다.</h5>
-        <p style="line-height:1.3; color:#fff; max-width:900px; margin:0 auto;">
-          Trend에 민감한 QA Engineer가 되어야만 한다.<br>
-          나는 IT의 Generalist가 되어야 했다. 그래야 살아남을 수 있었다.<br>
-          내가 꿈꾸는 나의 미래는 IT Trend를 리드하는 Engineer이다.<br>
-          나는 이미 많은 다양한 도메인에 많은 경험을 갖고 있다.<br>
-          나와 주위 동료들은 이미 알고 있다. 내 경험이 Project에 도움이 된다는 것을... <br><br>
-          나는 Quality Assurance Engineer로 Specialist로 거듭나기 위해 정진하고 있다.<br>
-          Issue를 깊이 바라보는 초석이 되었으며, 이는 Critical Factor를 찾는데 도움이 된다.<br><br>
-          내가 새로운 곳을 찾는 이유는 오늘의 내 상황이 어려움이 아니라,<br>
-          내일의 내가 더욱 정진하여 빛날 곳을 찾을 뿐이다.<br>
-          <u>왜냐하면, 나는 끊임없이 계속 진화하길 원한다. 이건 욕구다.</u><br>
-        </p>
-      </center>
+      <img class="circle" src="assets/img/portfolio/park_1.png" alt="박희장 프로필1">
+      <h5 class="text-purple mt-3">나는 최고의 'Technician'이 되는 꿈을 꾸고 있다.</h5>
+      <p class="lead" style="line-height:1.6; max-width:900px; margin:0 auto;">
+        Trend에 민감한 QA Engineer로서, 테스트 자동화·CI/CD·테스트 설계 전문성을 더해
+        조직의 품질 문화를 리드하는 것을 목표로 합니다. 또한 보안·컴플라이언스와의
+        균형을 맞춰 신뢰성 높은 서비스를 만드는 것이 장기 목표입니다.
+      </p>
       <h6 class="text-center text-purple">※ CSS로 Circle 구현 후 이미지 노출</h6>
     </div>
   </section>
@@ -346,6 +309,7 @@
           <h4 class="mb-4">LOCATION</h4>
           <p class="pre-wrap lead mb-0">9-3, Seongnam-daero 772beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea</p>
         </div>
+
         <div class="col-lg-4 mb-5 mb-lg-0">
           <h4 class="mb-4">AROUND THE WEB</h4>
           <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/heejang.park/"><i class="fab fa-fw fa-facebook-f"></i></a>
@@ -353,9 +317,17 @@
           <a class="btn btn-outline-light btn-social mx-1" href="mailto:goodsharp@naver.com"><i class="far fa-paper-plane"></i></a>
           <a class="btn btn-outline-light btn-social mx-1" href="https://cafe.naver.com/swtester"><i class="fas fa-at"></i></a>
         </div>
+
         <div class="col-lg-4">
           <h4 class="mb-4">Use Skill</h4>
-          <p class="pre-wrap lead mb-0">Bootstrap, Google Chart(Timeline, Tablechart), ChartJS(Radar), Google API(Map Javascript), Google Analytics, BxSlider(Jquery), CSS Handling</p>
+          <ul class="list-unstyled text-left" style="color:#fff;">
+            <li>Bootstrap</li>
+            <li>Google Chart (Timeline, Tablechart)</li>
+            <li>Chart.js (Radar)</li>
+            <li>Google API (Map JS)</li>
+            <li>CI/CD: GitLab, Jenkins, Nexus</li>
+            <li>Test Tools: JMeter, SonarQube, Selenium (참조)</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -369,15 +341,13 @@
     <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
   </div>
 
-  <!-- Core JS (Bootstrap, jQuery) -->
+  <!-- Core JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-  <!-- Custom Script 파일 (원본이 존재하면 유지) -->
   <script src="js/scripts.js"></script>
 
-  <!-- ------------- Google Charts: load both timeline & table, then draw ------------- -->
+  <!-- Google Charts: Timeline + Table (경력 및 교육/자격 내용 반영) -->
   <script>
     google.charts.load('current', {'packages':['timeline','table']});
     google.charts.setOnLoadCallback(drawCharts);
@@ -396,6 +366,7 @@
       dataTable.addColumn({ type: 'date', id: 'Start' });
       dataTable.addColumn({ type: 'date', id: 'End' });
 
+      // 경력기술서 원문 항목들(첨부 문서 반영)
       dataTable.addRows([
         [ '정말필요한회사', '소프트웨어 테스트 및 기술지원(Cellvic팀)', new Date(2003, 7, 1),   new Date(2004, 1, 30) ],
         [ '퓨처텔',           '단말기 하드웨어 및 소프트웨어 테스트(QE팀)',                   new Date(2004, 8, 11),  new Date(2005, 2, 28) ],
@@ -408,7 +379,7 @@
         [ '티시스 숭례문지점', '금융(흥국 계열)권 전사 품질 개선(품질개선팀)',            new Date(2013, 5, 6),   new Date(2014, 1, 15) ],
         [ '네오블',           '음원 스트리밍 서비스(Genie) 품질 관리(QA팀)',            new Date(2014, 3, 27),  new Date(2014, 7, 7) ],
         [ '열린기술',         'SI(스마트팩토리) 프로젝트 품질 관리 및 PMO(PPQA팀)',     new Date(2014, 11, 17), new Date(2017, 6, 30) ],
-        [ '메조미디어',       '광고 플랫폼 서비스 품질 관리(운영팀)',                   new Date(2017, 7, 3),   new Date(2022, 4, 30) ]
+        [ '메조미디어',       '광고 플랫폼 서비스 품질 관리(운영팀) / 차세대 AD Tech 품질관리 및 PMO', new Date(2017, 7, 3),   new Date(2024, 8, 31) ]
       ]);
 
       var options = {
@@ -435,13 +406,7 @@
         ['교육', '소프트웨어 테스트 전문가 교육', '이수', '2005/06', 'TTA'],
         ['교육', 'CC인증 평가제출물 작성교육', '이수', '2011/12', 'KISA'],
         ['교육', 'ISP 교육', '이수', '2013/10', 'Tsis 사내 교육'],
-        ['교육', '화학 및 건설안전 기술 교육', '이수', '2015/02~2015/03', '멀티캠퍼스 온라인교육'],
-        ['교육', '실무사례를 통한 프로젝트 관리 기법 및 적용과 해법', '이수', '2015/06~2015/07', '멀티캠퍼스 온라인교육'],
-        ['교육', '웹접근성의 이해(기본)', '이수', '2015/07', '한국정보화진흥원'],
-        ['교육', '데이터베이스 관리(DB구조, 인스턴스, 저장영역)', '이수', '2017/05', '한국소프트웨어기술진흥협회'],
-        ['교육', 'Data 품질관리', '이수', '2017/05', '한국소프트웨어기술진흥협회'],
         ['자격', '정보처리기능사', '합격', '1998/12', '한국산업인력공단'],
-        ['자격', '워드프로세스 1급', '합격', '2002/12', '대한상공회의소'],
         ['자격', '정보처리산업기사', '합격', '2012/08', '한국산업인력공단'],
         ['자격', '정보처리기사', '합격', '2013/08', '한국산업인력공단'],
         ['자격', 'ISTQB Foundation Level', '합격', '2014/08', 'ISTQB'],
@@ -453,7 +418,55 @@
     }
   </script>
 
-  <!-- ------------- Google Map (원본 마커 구성 재현) ------------- -->
+  <!-- Chart.js: Radar charts (skills) -->
+  <script>
+    // Technique
+    new Chart(document.getElementById("techniqueChart"), {
+      type: 'radar',
+      data: {
+        labels: ['QA', 'Testing', 'Methodology', 'PMO & Audit', 'DevOps'],
+        datasets: [{
+          label: "Technique",
+          data: [98, 99, 90, 90, 88],
+          backgroundColor: "rgba(200,0,0,0.15)",
+          borderColor: "rgba(200,0,0,0.8)"
+        }]
+      },
+      options: { scale:{ ticks:{ beginAtZero:true, min:70, max:100, stepSize:5 } }, legend:{display:false} }
+    });
+
+    // Skill
+    new Chart(document.getElementById("skillChart"), {
+      type: 'radar',
+      data: {
+        labels: ['Test Mgt','Func Test', 'N-Func Test', 'Process Mgt', 'Config Mgt'],
+        datasets: [{
+          label: "Skill",
+          data: [98,95,92,93,90],
+          backgroundColor: "rgba(255,206,86,0.15)",
+          borderColor: "rgba(255,206,86,0.9)"
+        }]
+      },
+      options: { scale:{ ticks:{ beginAtZero:true, min:70, max:100, stepSize:5 } }, legend:{display:false} }
+    });
+
+    // Experience
+    new Chart(document.getElementById("experienceChart"), {
+      type: 'radar',
+      data: {
+        labels: ['System Integration', 'Mobile', 'Web', 'Security', 'Embeded', 'Game', 'Financial', 'Advertising'],
+        datasets: [{
+          label: "Experience",
+          data: [94,97,95,90,83,87,83,88],
+          backgroundColor: "rgba(75,192,192,0.15)",
+          borderColor: "rgba(75,192,192,0.9)"
+        }]
+      },
+      options: { scale:{ ticks:{ beginAtZero:true, min:70, max:100, stepSize:5 } }, legend:{display:false} }
+    });
+  </script>
+
+  <!-- Google Map (원본 마커 재사용) -->
   <script>
     var map;
     var InfoWindows = [];
@@ -511,7 +524,7 @@
     }
   </script>
 
-  <!-- Google Maps API (원본 키 사용) -->
+  <!-- Google Maps API (원본 키) -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-3u9XNYT-3NEH_zGRAc9WoZ5frc14FbQ&callback=initMap&region=kr"></script>
 
 </body>
