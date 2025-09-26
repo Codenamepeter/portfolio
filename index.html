@@ -1,705 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="Peter's QA Portfolio">
-		<meta name="keywords" content="QA, Testing, Quality, Process, PMO, Function, Audit, CMMi, PMBOK, 잔다르쿠, Codename Peter">
-		<meta name="author" content="CodeName Peter">
-		<title>QA Engineer | Park hee jang</title>
-				
-		<!-- Font Awesome icons (free version)-->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
-		
-		<!-- Core theme CSS (includes Bootstrap)-->
-		<link href="css/styles.css" rel="stylesheet">
-		
-		<!-- Fonts CSS-->
-		<link rel="stylesheet" href="css/heading.css">
-		<link rel="stylesheet" href="css/body.css">		
-		<link rel="shortcut icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
-		
-		<!-- 구글차트, 타임라인 -->
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<script type="text/javascript">
-			google.charts.load('current', {'packages':['timeline']});
-			google.charts.setOnLoadCallback(drawChart);
-			function drawChart() {
-			var container = document.getElementById('timeline');
-			var chart = new google.visualization.Timeline(container);
-			var dataTable = new google.visualization.DataTable();
-			dataTable.addColumn({ type: 'string', id: 'item' });
-			dataTable.addColumn({ type: 'string', id: 'Desc' });
-			dataTable.addColumn({ type: 'date', id: 'Start' });
-			dataTable.addColumn({ type: 'date', id: 'End' });
-			dataTable.addRows([
-			[ '정말필요한회사', '소프트웨어 테스트 및 기술지원(Cellvic팀)', new Date(2003, 7, 1), new Date(2004, 1, 30) ],
-			[ '퓨처텔', '단말기 하드웨어 및 소프트웨어 테스트(QE팀)', new Date(2004, 8, 11), new Date(2005, 2, 28) ],
-			[ '마름모소프트', '나모 인터랙티브 소프트웨어 품질 관리(SQA1팀)', new Date(2005, 3, 24), new Date(2008, 12, 20) ],
-			[ '홍인터내셔날', '리눅스 기반 임베디드 소프트웨어 테스트(QA팀)', new Date(2009, 2, 10), new Date(2009, 5, 14) ], 
-			[ '마름모소프트', '소프트웨어 품질 사업 수행 및 컨설팅 주관(품질관리실)', new Date(2009, 5, 18), new Date(2010, 3, 10) ],
-			[ '바른손게임즈', '게임 소프트웨어 국내/외 품질 관리(QA팀)',new Date(2010, 6, 14), new Date(2011, 6, 25) ],
-			[ '짱라이브', '모바일 동영상 서비스 품질 관리(운영팀)', new Date(2011, 6, 27), new Date(2011, 7, 31) ],
-			[ '세이퍼존', '보안 소프트웨어 품질 및 인증 관리(기술연구소)', new Date(2011, 11, 28), new Date(2013, 4, 20) ],
-			[ '티시스 숭례문지점', '금융(흥국 계열)권 전사 품질 개선(품질개선팀)', new Date(2013, 5, 6), new Date(2014, 1, 15) ],
-			[ '네오블', '음원 스트리밍 서비스(Genie) 품질 관리(QA팀)', new Date(2014, 3, 27), new Date(2014, 7, 7) ], 
-			[ '열린기술', 'SI(스마트팩토리) 프로젝트 품질 관리 및 PMO(PPQA팀)', new Date(2014, 11, 17), new Date(2017, 6, 30) ], 
-			[ '메조미디어', '광고 플랫폼 서비스 품질 관리(운영팀)', new Date(2017, 7, 3), new Date(2022, 4, 30) ]]);
-			var options = {
-			timeline: { rowLabelStyle: {fontSize: 14, color: '#603913' },
-			barLabelStyle: { fontSize: 10 } }
-			};
-			chart.draw(dataTable);
-			}
-		</script>
-		
-		<!-- 구글차트, 테이블 -->
-		<script type="text/javascript">
-			google.charts.load('current', {'packages':['table']});
-			google.charts.setOnLoadCallback(drawTable);
-			function drawTable() {
-			var data = new google.visualization.DataTable();
-			data.addColumn('string', '구분');
-			data.addColumn('string', '항목명');
-			data.addColumn('string', '이수');
-			data.addColumn('string', '날짜');
-			data.addColumn('string', '설명');
-			data.addRows([
-			['학력', '호서전산전문학교', '중퇴', '1999/03~2000/02', '정보처리과'], 
-			['학력', '유한대학교', '졸업', '2005/03~2008/02', '산업시스템경영과'], 
-			['학력', '학점은행제', '졸업', '2013/03~2014/02', '정보통신공학사'], 
-			['교육', '소프트웨어 테스트 전문가 교육', '이수', '2005/06', 'TTA'], 
-			['교육', 'CC인증 평가제출물 작성교육', '이수', '2011/12', 'KISA'], 
-			['교육', 'ISP 교육', '이수', '2013/10', 'Tsis 사내 교육'],
-			['교육', '화학 및 건설안전 기술 교육', '이수', '2015/02~2015/03', '멀티캠퍼스 온라인교육'],
-			['교육', '실무사례를 통한 프로젝트 관리 기법 및 적용과 해법', '이수', '2015/06~2015/07', '멀티캠퍼스 온라인교육'],
-			['교육', '웹접근성의 이해(기본)', '이수', '2015/07', '한국정보화진흥원'],
-			['교육', '데이터베이스 관리(DB구조, 인스턴스, 저장영역)', '이수', '2017/05', '한국소프트웨어기술진흥협회'],
-			['교육', 'Data 품질관리', '이수', '2017/05', '한국소프트웨어기술진흥협회'],
-			['자격', '정보처리기능사', '합격', '1998/12', '한국산업인력공단'],
-			['자격', '워드프로세스 1급', '합격', '2002/12', '대한상공회의소'],
-			['자격', '정보처리산업기사', '합격', '2012/08', '한국산업인력공단'],
-			['자격', '정보처리기사', '합격', '2013/08', '한국산업인력공단'],
-			['자격', 'ISTQB Foundation Level', '합격', '2014/08', 'ISTQB'],
-			['자격', '개인정보취급사(CPPF)', '합격', '2016/07', '한국CPO포럼'],
-			['자격', 'OPIC Speaking IL', '합격', '2019/08', 'ACTFL']]);
-			var table = new google.visualization.Table(document.getElementById('table_div'));
-			table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
-			}
-		</script>
-		<!-- Chart JS -->
-		<script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
-		</script>
-		<!-- 구글애널리틱스 -->
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179479499-1"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-  			function gtag(){dataLayer.push(arguments);}
-  			gtag('js', new Date());
-  			gtag('config', 'UA-179479499-1');
-		</script>
-		
-		<!--
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<script>
-     			(adsbygoogle = window.adsbygoogle || []).push({
-          		google_ad_client: "ca-pub-7587141354632937",
-          		enable_page_level_ads: true
-     			});
-		-->
-	</script>
-	
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Peter's QA Portfolio">
+  <meta name="keywords" content="QA, Testing, Quality, Process, PMO, Function, Audit, CMMi, PMBOK, Codename Peter">
+  <meta name="author" content="CodeName Peter">
+  <title>QA Engineer | Park Hee Jang</title>
+
+  <!-- Open Graph (SNS 공유 최적화) -->
+  <meta property="og:title" content="QA Engineer | Park Hee Jang">
+  <meta property="og:description" content="Professional Quality Assurance Portfolio by Park Hee Jang">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/portfolio/park_3.png">
+  <meta property="og:url" content="https://codenamepeter.github.io/portfolio">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="QA Engineer | Park Hee Jang">
+  <meta name="twitter:description" content="Professional QA Engineer Portfolio">
+  <meta name="twitter:image" content="assets/img/portfolio/park_3.png">
+
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap & Custom CSS -->
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/heading.css">
+  <link rel="stylesheet" href="css/body.css">
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/img/portfolio/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/img/portfolio/favicon.png">
+
+  <!-- Google Charts -->
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179479499-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-179479499-1');
+  </script>
 </head>
+
 <body id="page-top">
-	<nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
-	<div class="container">
-	<a class="navbar-brand js-scroll-trigger" href="#page-top">Introduction</a>
-	<button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars"></i></button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item mx-0 mx-lg-1">
-					<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#career">CAREER</a>
-				</li>
-				<li class="nav-item mx-0 mx-lg-1">
-					<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#edu">EDUCATION</a>
-				</li>
-				<li class="nav-item mx-0 mx-lg-1">
-					<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skill">SKILL</a>
-				</li>
-				<li class="nav-item mx-0 mx-lg-1">
-					<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">PORTFOLIO</a>
-				</li>
-				<li class="nav-item mx-0 mx-lg-1">
-					<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#place">PLACE</a>
-				</li>
-				<li class="nav-item mx-0 mx-lg-1">
-					<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#plan">PLAN</a>
-				</li>	
-			</ul>
-		</div>
-	</div>	
-	</nav>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav" aria-label="Main Navigation">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Introduction</a>
+      <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" 
+              type="button" data-toggle="collapse" data-target="#navbarResponsive" 
+              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#career">CAREER</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#edu">EDUCATION</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skill">SKILL</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">PORTFOLIO</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#place">PLACE</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#plan">PLAN</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<header class="masthead bg-primary text-white text-center">
-<div class="container d-flex align-items-center flex-column">
+  <!-- Header -->
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+      <img class="circle" src="assets/img/portfolio/park_3.png" alt="박희장 프로필 사진" />
+      <h1 class="masthead-heading mb-0">Park Heejang (Peter)</h1>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <h3 class="masthead-subheading">Professional Quality Assurance Engineer</h3>
+      <p><strong>IT Generalist & Testing Evangelist</strong></p>
+      <p><strong>QA Full Stack Engineer</strong></p>
+      <p><strong>SW Certificate Veteran</strong></p>
+    </div>
+  </header>
 
-<!-- Masthead Avatar Image-->
-<img class="circle" src="assets/img/portfolio/park_3.png" alt="박희장 프로필">
+  <!-- CAREER -->
+  <section class="page-section portfolio" id="career">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="page-section-heading text-secondary mb-0">CAREER</h2>
+      </div>
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <div class="text-center" id="timeline" style="height: 540px;"></div>
+      <h6 class="text-center text-purple">※ Google Chart - Timelines 구현</h6>
+    </div>
+  </section>
 
-<!-- Masthead Heading-->
-<h1 class="masthead-heading mb-0">Park heejang(Peter)</h1>
+  <!-- EDUCATION -->
+  <section class="page-section bg-primary text-white mb-0" id="edu">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="page-section-heading d-inline-block text-white">EDUCATION & CERTIFICATE</h2>
+      </div>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <div class="text-center" id="table_div" style="color:black; height:640px;"></div>
+      <h6 class="text-center text-purple">※ Google Chart - Table Charts 구현</h6>
+    </div>
+  </section>
 
-<!-- Icon Divider-->
-<div class="divider-custom divider-light">
-	<div class="divider-custom-line"></div>
-	<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-	<div class="divider-custom-line"></div>
-</div>
+  <!-- SKILL SET -->
+  <section class="page-section portfolio" id="skill">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="page-section-heading text-secondary mb-0">SKILL SET</h2>
+      </div>
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
 
-<!-- Masthead Subheading-->
-<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><h3>Professional Quality Assurance Engineer</h3></p>
-<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>IT Generalist &amp; Testing Evangelist</b></p>
-<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>Test Engineering Specialist</b></p>
-<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>SW Cetificate Veteran</b></p>
-<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>Project Management Office</b></p>
-<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>QA Full stack Engnineer</b></p>
-<p class="pre-wrap masthead-subheading font-weight-light mb-0" style="line-height:1.5;"><b>Various experience In the IT</b></p>
-</header>
+      <!-- Radar Charts (기술 / 스킬 / 경험) -->
+      <div class="text-center mb-5">
+        <h3>[Technique]</h3>
+        <canvas id="techniqueChart" style="max-width:700px; margin:auto;"></canvas>
+      </div>
 
+      <div class="text-center mb-5">
+        <h3>[Skill]</h3>
+        <canvas id="skillChart" style="max-width:700px; margin:auto;"></canvas>
+      </div>
 
-<!-- CAREER, 구글 차트 | 타임라인 --> 
-<section class="page-section portfolio" id="career">
-	<div class="container">
-		<!-- Section Heading-->
-		<div class="text-center">
-			<h2 class="page-section-heading text-secondary mb-0 d-inline-block">CAREER</h2>
-		</div>
-		
-		<!-- Icon Divider-->
-		<div class="divider-custom">
-			<div class="divider-custom-line"></div>
-			<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-			<div class="divider-custom-line"></div>
-		</div>
-				
-		<div class="text-center" id="timeline" style=" height: 540px;"></div>
-		<h6 class="text-center" style="color:#800080;">※ Google Chart - Timelines 구현</h6>
-	</div>
-</section>
+      <div class="text-center mb-5">
+        <h3>[Experience]</h3>
+        <canvas id="experienceChart" style="max-width:700px; margin:auto;"></canvas>
+      </div>
 
-<!-- EDUCATION & Certificate , 구글차트 | 테이블 -->
-<section class="page-section bg-primary text-white mb-0" id="edu">
-	<div class="container">
-		<!-- About Section Heading-->
-		<div class="text-center">
-		<h2 class="page-section-heading d-inline-block text-white">EDUCATION & CERTIFICATE</h2>
-	</div>
-	
-	<!-- Icon Divider-->
-	<div class="divider-custom divider-light">
-		<div class="divider-custom-line"></div>
-		<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-		<div class="divider-custom-line"></div>
-	</div>
+      <h6 class="text-center text-purple">※ Chart.js - Radar Chart 구현</h6>
+    </div>
+  </section>
 
-	<!-- About Section Content-->
-		<div class="text-center" id="table_div" style="color: black; height: 640px;"></div>
-		<br></br><br></br>
-		<h6 class="text-center" style="color:#800080;">※ Google Chart - Table Charts 구현</h6>
-</section>
- 
-<!-- SKILL SET, chartjs | radar --> 
-<section class="page-section portfolio" id="skill">
-	<div class="container">
-		<!-- Portfolio Section Heading-->
-		<div class="text-center">
-		<h2 class="page-section-heading text-secondary mb-0 d-inline-block">SKILL SET</h2>
-	</div>
-	<!-- Icon Divider-->
-	<div class="divider-custom">
-		<div class="divider-custom-line"></div>
-		<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-		<div class="divider-custom-line"></div>
-	</div>
-	
-	<center>
-		<div class="text-center"><h3>[Technique]</h3></div>
-		<div style="width:100%;margin:0 auto;">
-			<canvas id="marksChart" class="chartjs" style="width:100vw;height:30vh"></canvas>
-		</div>
-	
-		<script>
-			var marksCanvas = document.getElementById("marksChart");
-			var marksData = {
-			labels: ['QA', 'Testing', 'Methodology', 'PMO & Audit', 'Devops'],
-			datasets: [{
-			label: "Technique",
-			backgroundColor: "transparent",
-			borderColor: "rgba(200,0,0,0.6)",
-			fill: false,
-			radius: 6,
-			pointRadius: 6,
-			pointBorderWidth: 3,
-			pointBackgroundColor: "red",
-			pointBorderColor: "rgba(200,0,0,0.6)",
-			pointHoverRadius: 10,
-			data: [98, 99, 90, 90, 88]
-			}]
-			};
-	
-			var chartOptions = {
-			scale: {
-			gridLines: {
-			color: "gray",
-			lineWidth: 3
-			},
-			angleLines: {
-			display: false
-			},
-			ticks: {
-			beginAtZero: true,
-			min: 70,
-			max: 100,
-			stepSize:5
-			},
-			pointLabels: {
-			fontSize: 18,
-			fontColor: "green"
-			}
-			},
-			legend: {
-			display: false
-			}
-			};
-			
-			var radarChart = new Chart(marksCanvas, {
-			type: 'radar',
-			data: marksData,
-			options: chartOptions
-			});
-		</script> 
-	</center>
+  <!-- PORTFOLIO -->
+  <section class="page-section bg-primary text-white mb-0" id="portfolio">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="page-section-heading text-white">PORTFOLIO</h2>
+      </div>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <iframe src="https://codenamepeter.github.io/portfolio/slidertest.html" frameborder="0" style="width:100%; height:800px;" scrolling="no"></iframe>
+      <h6 class="text-center text-purple">※ JQuery - BxSlider | iframe 구현</h6>
+    </div>
+  </section>
 
-	<center>
-		<br>
-		<div class="text-center"><h3>[Skill]</h3></div>
-		<div style="width:100%;margin:0 auto;">
-			<canvas id="marksChart1" class="chartjs" style="width:100vw;height:30vh"></canvas>
-		</div>
-		
-		<script>
-			var marksCanvas = document.getElementById("marksChart1");
-			var marksData = {
-			labels: ['Test Mgt','Func Test', 'N-Func Test', 'Process Mgt', 'Config Mgt'],
-			datasets: [{
-			label: "SKILL",
-			backgroundColor: "transparent",
-			borderColor: "rgba(200,0,0,0.6)",
-			fill: false,
-			radius: 6,
-			pointRadius: 6,
-			pointBorderWidth: 3,
-			pointBackgroundColor: "Yellow",
-			pointBorderColor: "rgba(200,0,0,0.6)",
-			pointHoverRadius: 10,
-			data: [98, 95, 92, 93, 90]
-			}]
-			};
-			
-			var chartOptions = {
-			scale: {
-			gridLines: {
-			color: "glay",
-			lineWidth: 3
-			},
-			angleLines: {
-			display: false
-			},
-			ticks: {
-			beginAtZero: true,
-			min: 70,
-			max: 100,
-			stepSize:5
-			},
-			pointLabels: {
-			fontSize: 18,
-			fontColor: "blue"
-			}
-			},
-			legend: {
-			display: false
-			} 
-			};
-			
-			var radarChart = new Chart(marksCanvas, {
-			type: 'radar',
-			data: marksData,
-			options: chartOptions
-			});
-		</script> 
-	</center>
-		
-	<center>
-		<br>
-		<div class="text-center"><h3>[Experience]</h3></div>
-		<div style="width:100%;margin:0 auto;">
-			<canvas id="marksChart2" class="chartjs" style="width:100vw;height:30vh"></canvas>
-		</div>
-		
-		<script>
-			var marksCanvas = document.getElementById("marksChart2");
-			var marksData = {
-			labels: ['System Integration', 'Mobile', 'Web', 'Security', 'Embeded', 'Game', 'Financal', 'Advertising'],
-			datasets: [{
-			label: "Experience",
-			backgroundColor: "transparent",
-			borderColor: "rgba(200,0,0,0.6)",
-			fill: false,
-			radius: 6,
-			pointRadius: 6,
-			pointBorderWidth: 3,
-			pointBackgroundColor: "orange",
-			pointBorderColor: "rgba(200,0,0,0.6)",
-			pointHoverRadius: 10,
-			data: [94, 97, 95, 90, 83, 87, 83, 88]
-			}]
-			};
-			
-			var chartOptions = {
-			scale: {
-			gridLines: {
-			color: "gray",
-			lineWidth: 3
-			},
-			angleLines: {
-			display: false
-			},
-			ticks: {
-			beginAtZero: true,
-			min: 70,
-			max: 100,
-			stepSize:5
-			},
-			pointLabels: {
-			fontSize: 18,                                                                                                                                                                                                                                                                                                 
-			}
-			},
-			legend: {
-			display: false
-			}
-			};
-			
-			var radarChart = new Chart(marksCanvas, {
-			type: 'radar',
-			data: marksData,
-			options: chartOptions
-			});
-		</script> 
-		<br></br><br></br>
-		<h6 class="text-center" style="color:#800080;">※ Chartjs - Radar Chart 구현</h6>
-	</center>	
-</section>
+  <!-- PLACE -->
+  <section class="page-section portfolio" id="place">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="page-section-heading text-secondary mb-0">FAMILIAR PLACE</h2>
+      </div>
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <div id="map" style="width:100%; height:50vh;"></div>
+      <h6 class="text-center text-purple">※ Google API - MAP Javascript 구현</h6>
+    </div>
+  </section>
 
-<section class="page-section bg-primary text-white mb-0" id="portfolio">
-	<div class="container">
-	
-		<!-- About Section Heading-->
-		<div class="text-center">
-			<h2 class="page-section-heading d-inline-block text-white">PORTFOLIO</h2>
-		</div>
+  <!-- PLAN -->
+  <section class="page-section bg-primary text-white mb-0" id="plan">
+    <div class="container text-center">
+      <h2 class="page-section-heading text-white">Plans for the future</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <img class="circle" src="assets/img/portfolio/park_1.png" alt="박희장 프로필 사진 2">
+      <h5 class="text-purple mt-3">나는 최고의 'Technician'이 되는 꿈을 꾸고 있다.</h5>
+      <p class="lead" style="line-height:1.6;">
+        Trend에 민감한 QA Engineer가 되어야 한다.<br>
+        나는 IT의 Generalist로서 다양한 도메인을 경험했다.<br>
+        미래에는 IT Trend를 리드하는 Engineer가 되고자 한다.<br><br>
+        Quality Assurance Engineer로서 Specialist로 거듭나기 위해 노력하고 있으며,<br>
+        문제의 핵심을 깊이 탐구하여 Critical Factor를 찾아내는 데 강점을 가지고 있다.<br><br>
+        새로운 기회를 찾는 이유는 현재의 어려움이 아니라,<br>
+        내일 더 발전하고 빛날 수 있는 환경을 원하기 때문이다.<br>
+        <u>나는 끊임없이 진화하고 싶다. 이것은 나의 욕구다.</u>
+      </p>
+      <h6 class="text-purple">※ CSS로 Circle 구현 후 이미지 노출</h6>
+    </div>
+  </section>
 
-	<!-- Icon Divider-->
-	<div class="divider-custom divider-light">
-		<div class="divider-custom-line"></div>
-		<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-		<div class="divider-custom-line"></div>
-	</div>
-		<iframe src="https://codenamepeter.github.io/portfolio/slidertest.html"  frameborder="0" style="width:100%; height: 800px;" scrolling="no"></iframe>
-		<h6 class="text-center" style="color:#800080;">※ JQuery - BxSlider | iframe 구현</h6>
-	</div>
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5">
+          <h4 class="mb-4">LOCATION</h4>
+          <p class="lead mb-0">9-3, Seongnam-daero 772beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea</p>
+        </div>
+        <div class="col-lg-4 mb-5">
+          <h4 class="mb-4">AROUND THE WEB</h4>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/heejang.park/"><i class="fab fa-fw fa-facebook-f"></i></a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/heejang-park-48a85b111/"><i class="fab fa-fw fa-linkedin-in"></i></a>
+          <a class="btn btn-outline-light btn-social mx-1" href="mailto:goodsharp@naver.com"><i class="far fa-paper-plane"></i></a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://cafe.naver.com/swtester"><i class="fas fa-at"></i></a>
+        </div>
+        <div class="col-lg-4">
+          <h4 class="mb-4">Use Skill</h4>
+          <ul class="list-unstyled">
+            <li>Bootstrap</li>
+            <li>Google Chart (Timeline, Tablechart)</li>
+            <li>Chart.js (Radar)</li>
+            <li>Google API (Map JS)</li>
+            <li>Google Analytics</li>
+            <li>JQuery (BxSlider)</li>
+            <li>CSS Customization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-</section>
+  <section class="copyright py-4 text-center text-white">
+    <div class="container"><small>Copyright © Codenamepeter.github.io 2020</small></div>
+  </section>
 
-<section class="page-section portfolio" id="place">
-	<div class="container">
-		<!-- Section Heading-->
-		<div class="text-center">
-			<h2 class="page-section-heading text-secondary mb-0 d-inline-block">FAMILIAR PLACE</h2>
-		</div>
-		
-		<!-- Icon Divider-->
-		<div class="divider-custom">
-			<div class="divider-custom-line"></div>
-			<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-			<div class="divider-custom-line"></div>
-		</div>			
-		<div id="map" style="width:100%; height: 50vh;"></div>
-  		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-3u9XNYT-3NEH_zGRAc9WoZ5frc14FbQ&callback=initMap&region=kr"></script>
-		    <script>
-			var map;
-			var InforObj = [];
-			var centerCords = {
-			    lat: 37.519618,
-			    lng: 126.998943
-			};
-			var markersOnMap = [{
-				placeName: "결혼, 킹콩인러브",
-				LatLng: [{
-				    lat: 37.504743, 
-				    lng: 127.028521
-				}]
-			    },
-			    {
-				placeName: "자취, 구로동라이프",
-				LatLng: [{
-				    lat: 37.489277, 
-				    lng: 126.889224
-				}]
-			    },
-			    {
-			placeName: "새터전, 분당생활",
-				LatLng: [{
-				    lat: 37.389862, 
-				    lng: 127.127039
-				}]
-			    },
-			    {
-			placeName: "퓨처텔 - 폐업",
-				LatLng: [{
-				    lat: 37.394348, 
-				    lng: 126.963994
-				}]
-			    },
-			    {
-			placeName: "마름모소프트 - 폐업",
-				LatLng: [{
-				    lat: 37.483170, 
-				    lng: 127.019986
-				}]
-			    },
-			    {
-			placeName: "바른손게임즈 - 게임사업 종료",
-				LatLng: [{
-				    lat: 37.654165, 
-				    lng: 126.770839
-				}]
-			    },
-			    {
-			placeName: "메조미디어 - CJ ENM 계열사",
-				LatLng: [{
-				    lat: 37.563895, 
-				    lng: 127.003293
-				}]
-			    },
-			    {
-			placeName: "정말필요한회사 - 폐업",
-				LatLng: [{
-				    lat: 37.511356, 
-				    lng: 127.045078
-				}]
-			    },
-			    {
-			placeName: "홍인터내셔날",
-				LatLng: [{
-				    lat: 37.482489,  
-				    lng: 126.897273
-				}]
-			    },
-			    {
-			placeName: "세이퍼존",
-				LatLng: [{
-				    lat: 37.474238,  
-				    lng: 126.881166
-				}]
-			    },
-			    {
-			placeName: "열린기술",
-				LatLng: [{
-				    lat: 37.496343,  
-				    lng: 127.034920
-				}]
-			    },
-			    {
-			placeName: "짱라이브 - 폐업",
-				LatLng: [{
-				    lat: 37.487153,
-				    lng: 127.046923
-				}]
-			    },
-			    {
-			placeName: "티시스 숭례문지점",
-				LatLng: [{
-				    lat: 37.559595,
-				    lng: 126.973762
-				}]
-			    },
-			    {
-			placeName: "KT뮤직 - 현 지니뮤직",
-				LatLng: [{
-				    lat: 37.513697, 
-				    lng: 127.062405
-				}]
-			    }
-			];
+  <!-- Scroll Top -->
+  <div class="scroll-to-top d-lg-none position-fixed">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
 
-			window.onload = function () {
-			    initMap();
-			};
+  <!-- Bootstrap core JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
-			function addMarkerInfo() {
-			    for (var i = 0; i < markersOnMap.length; i++) {
-				var contentString = '<div id="content"><h4>' + markersOnMap[i].placeName +
-				    '</h4><p>Familiar place in korea.</p></div>';
+  <!-- Easing plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-				const marker = new google.maps.Marker({
-				    position: markersOnMap[i].LatLng[0],
-				    map: map
-				});
-
-				const infowindow = new google.maps.InfoWindow({
-				    content: contentString,
-				    maxWidth: 200
-				});
-
-				marker.addListener('click', function () {
-				    closeOtherInfo();
-				    infowindow.open(marker.get('map'), marker);
-				    InforObj[0] = infowindow;
-				});
-				// marker.addListener('mouseover', function () {
-				//     closeOtherInfo();
-				//     infowindow.open(marker.get('map'), marker);
-				//     InforObj[0] = infowindow;
-				// });
-				// marker.addListener('mouseout', function () {
-				//     closeOtherInfo();
-				//     infowindow.close();
-				//     InforObj[0] = infowindow;
-				// });
-			    }
-			}
-
-			function closeOtherInfo() {
-			    if (InforObj.length > 0) {
-				/* detach the info-window from the marker ... undocumented in the API docs */
-				InforObj[0].set("marker", null);
-				/* and close it */
-				InforObj[0].close();
-				/* blank the array */
-				InforObj.length = 0;
-			    }
-			}
-
-			function initMap() {
-			    map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 11,
-				center: centerCords
-			    });
-			    addMarkerInfo();
-			}
-		    </script>		
-		<h6 class="text-center" style="color:#800080;">※ Google API - MAP Javascript 구현</h6>
-	</div>
-</section>	
-
-<section class="page-section bg-primary text-white mb-0" id="plan">
-	<div class="container">
-	<!-- About Section Heading-->
-	<div class="text-center">
-	<h2 class="page-section-heading d-inline-block text-white">Plans for the future</h2>
-	</div>
-
-	<!-- Icon Divider-->
-	<div class="divider-custom divider-light">
-		<div class="divider-custom-line"></div>
-		<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-		<div class="divider-custom-line"></div>
-	</div>
-
-	<!-- About Section Content-->
-	<center>
-	<img class="circle" src="assets/img/portfolio/park_1.png" alt="박희장 프로필1">
-	<br><br>
-	<h5 class="text-center" style="color:#800080;">나는 최고의 'Technician'이 되는 꿈을 꾸고 있다.</h4>
-		<font style="line-height:1.3;">Trend에 민감한 QA Engineer가 되어야만 한다.<br>
-			나는 IT의 Generalist가 되어야 했다. 그래야 살아남을 수 있었다.<br>
-			내가 꿈꾸는 나의 미래는 IT Trend를 리드하는 Engineer이다.<br>
-			나는 이미 많은 다양한 도메인에 많은 경험을 갖고 있다.<br>
-			나와 주위 동료들은 이미 알고 있다. 내 경험이 Project에 도움이 된다는 것을... <br>
-			<br>
-			나는 Quality Assurance Engineer로 Specialist로 거듭나기 위해 정진하고 있다.<br>
-			Issue를 깊이 바라보는 초석이 되었으며, 이는 Critical Factor를 찾는데 도움이 된다.<br>
-			<br>
-			내가 새로운 곳을 찾는 이유는 오늘의 내 상황이 어려움이 아니라,<br>
-			내일의 내가 더욱 정진하여 빛날 곳을 찾을 뿐이다.<br>
-			<u> 왜냐하면, 나는 끊임없이 계속 진화하길 원한다. 이건 욕구다.</u><br>
-		</font>
-		</p>
-    	</center>
-	<h6 class="text-center" style="color:#800080;">※ CSS로 Circle 구현 후 이미지 노출</h6>
-</section>
-
-<!-- Footer -->
-<footer class="footer text-center">
-<!-- google Adsense 
-<script data-ad-client="ca-pub-7587141354632937" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
--->
-
-<div class="container">
-<div class="row">
-
-<!-- Footer Location-->
-<div class="col-lg-4 mb-5 mb-lg-0">
-<h4 class="mb-4">LOCATION</h4>
-<p class="pre-wrap lead mb-0">9-3, Seongnam-daero 772beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea</p>
-</div>
-
-<!-- Footer Social Icons-->
-<div class="col-lg-4 mb-5 mb-lg-0">
-	<h4 class="mb-4">AROUND THE WEB</h4>
-	<a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/heejang.park/">
-		<i class="fab fa-fw fa-facebook-f"></i>
-	</a>
-	<a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/heejang-park-48a85b111/">
-		<i class="fab fa-fw fa-linkedin-in"></i>
-	</a>
-	<a class="btn btn-outline-light btn-social mx-1" href="mailto:goodsharp@naver.com">
-		<i class="far fa-paper-plane"></i>
-	</a>
-	<a class="btn btn-outline-light btn-social mx-1" href="https://cafe.naver.com/swtester">
-		<i class="fas fa-at"></i>
-	</a>
-</div>
-
-<!-- Footer About Text-->
-<div class="col-lg-4">
-	<h4 class="mb-4">Use Skill</h4>
-	<p class="pre-wrap lead mb-0">Bootstrap, Google Adsense, Google Chart(Timeline, Tablechart), ChartJS(Radar), Google API(Map Javascript), Google Analytics, BxSlider(Jquery), CSS Handling </p>
-</div>
-
-	
-</footer>
-<!-- Copyright Section-->
-<section class="copyright py-4 text-center text-white">
-	<div class="container"><small class="pre-wrap">Copyright © Codenamepeter.github.io 2020</small></div>
-</section>
-
-<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
-	<div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
-
-<!-- Bootstrap core JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-
-<!-- Third party plugin JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<!-- Contact form JS-->
-
-<!-- Core theme JS-->
-<script src="js/scripts.js"></script>
+  <!-- Custom scripts -->
+  <script src="js/scripts.js"></script>
 </body>
 </html>
-
-
